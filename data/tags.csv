@@ -1,17 +1,4 @@
-Основные гарниры,side-basic
-Овощные гарниры,side-vegetable
-Гарниры из морепродуктов,side-seafood
-Мясные гарниры,side-meat
-Яичные гарниры,side-egg
-Другие гарниры,side-other
-Супы,soup
-Лапша,noodle
-Консервированные продукты,preserved
-Сладкие угощения,sweet-treats
-Соленые закуски,salty-snacks
-Хлебобулочные и мучные закуски,bread-snacks
-Сиропы или засахаренные продукты,syrup-candied
-Можно приготовить в микроволновке,microwave
-Можно заморозить,frozen
-Можно хранить в холодильнике 3-4 дня,short-store
-Можно хранить в холодильнике 5-7 дней,long-store
+десерт,dessert
+завтрак,breakfast
+обед,lunch
+ужин,dinner

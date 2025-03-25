@@ -17,3 +17,13 @@ class Base64ImageField(serializers.ImageField):
             data = ContentFile(base64.b64decode(imgstr), name='temp.' + ext)
 
         return super().to_internal_value(data)
+
+    def to_representation(self, value):
+        """Возвращает абсолютный URL изображения."""
+        if not value:
+            return None
+        request = self.context.get("request")
+        image_url = value.url
+        if request is not None:
+            return request.build_absolute_uri(image_url)
+        return image_url

@@ -1,7 +1,19 @@
 """Сериализаторы recipes."""
 from rest_framework import serializers
 
-from .models import Recipe
+from .models import Recipe, RecipeIngredient
+from api.serializers import Base64ImageField
+
+
+class IngredientSerializer(serializers.ModelSerializer):
+    """Сериализатор класса RecipeIngredient."""
+
+    class Meta:
+        """Мета-информация сериализатора RecipeIngredient."""
+
+        fields = ('id', 'name', 'measurement_unit', 'amount')
+        read_only_fields = ('name', 'measurement_unit')
+        model = RecipeIngredient
 
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -11,6 +23,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         read_only=True,
         slug_field='username'
     )
+    image = Base64ImageField()
 
     class Meta:
         """Мета-информация сериализатора Recipe."""
@@ -22,6 +35,7 @@ class RecipeSerializer(serializers.ModelSerializer):
             'ingredients',
             'tags',
             'cooking_time',
-            'author'
+            'author',
+            'image'
         )
         model = Recipe

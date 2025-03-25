@@ -10,6 +10,25 @@ from tags.models import Tag
 User = get_user_model()
 
 
+class RecipeIngredient(Ingredient):
+    """Модель ингредиента в рецепте."""
+    amount = models.IntegerField(
+        validators=(validators.MinValueValidator(1),),
+        verbose_name='Количество'
+    )
+
+    class Meta:
+        """Мета-информация RecipeIngredient."""
+
+        verbose_name = 'Ингредиент (рецепт)'
+        verbose_name_plural = 'Ингредиенты (рецепт)'
+        ordering = ('name', 'amount')
+
+    def __str__(self):
+        """Строковое представление RecipeIngredient."""
+        return f'Ингредиент: {self.name} (f{self.amount}).'
+
+
 class Recipe(models.Model):
     """Модель рецепта."""
 
@@ -21,7 +40,7 @@ class Recipe(models.Model):
     text = models.TextField(verbose_name='Текст')
     image = models.ImageField(upload_to='recipes/', verbose_name='Изображение')
     ingredients = models.ManyToManyField(
-        Ingredient,
+        RecipeIngredient,
         related_name='recipes',
         verbose_name='Ингредиенты'
     )

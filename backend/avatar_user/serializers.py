@@ -11,10 +11,7 @@ User = get_user_model()
 class AvatarUserCreateSerializer(UserCreateSerializer):
     """Сериализатор AvatarUser."""
 
-    avatar = serializers.SerializerMethodField(
-        'get_avatar_url',
-        read_only=True,
-    )
+    avatar = avatar = Base64ImageField(read_only=True)
 
     class Meta(UserCreateSerializer.Meta):
         model = User
@@ -22,12 +19,6 @@ class AvatarUserCreateSerializer(UserCreateSerializer):
             'id', 'email', 'username',
             'first_name', 'last_name', 'password', 'avatar'
         )
-
-    def get_avatar_url(self, obj):
-        """Возвращение URL аватара пользователя."""
-        if obj.avatar:
-            return obj.avatar.url
-        return None
 
 
 class AvatarSerializer(serializers.ModelSerializer):

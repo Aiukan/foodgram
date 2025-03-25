@@ -10,5 +10,5 @@ class TagSerializer(serializers.ModelSerializer):
     class Meta:
         """Мета-информация сериализатора Tag."""
 
-        fields = ('name', 'slug')
+        fields = ('id', 'name', 'slug')
         model = Tag

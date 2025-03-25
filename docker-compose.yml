@@ -18,10 +18,9 @@ services:
       - static:/app/collected_static/
       - media:/app/media
   frontend:
+    container_name: foodgram-front
     env_file: .env
     build: ./frontend/
-    depends_on:
-      - backend
     volumes:
       - static:/app/result_build/build
   nginx:
