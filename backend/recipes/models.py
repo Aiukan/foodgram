@@ -10,8 +10,18 @@ from tags.models import Tag
 User = get_user_model()
 
 
-class RecipeIngredient(Ingredient):
-    """Модель ингредиента в рецепте."""
+class RecipeIngredient(models.Model):
+    """Связь ингредиента и рецепта."""
+    ingredient = models.ForeignKey(
+        Ingredient,
+        on_delete=models.CASCADE,
+        related_name='recipes'
+    )
+    recipe = models.ForeignKey(
+        'Recipe',
+        on_delete=models.CASCADE,
+        related_name='ingredients'
+    )
     amount = models.IntegerField(
         validators=(validators.MinValueValidator(1),),
         verbose_name='Количество'
@@ -20,13 +30,17 @@ class RecipeIngredient(Ingredient):
     class Meta:
         """Мета-информация RecipeIngredient."""
 
-        verbose_name = 'Ингредиент (рецепт)'
-        verbose_name_plural = 'Ингредиенты (рецепт)'
-        ordering = ('name', 'amount')
+        verbose_name = 'Ингредиент в рецепте'
+        verbose_name_plural = 'Ингредиенты в рецепте'
+        unique_together = ('recipe', 'ingredient')
+        ordering = ('pk',)
 
     def __str__(self):
         """Строковое представление RecipeIngredient."""
-        return f'Ингредиент: {self.name} (f{self.amount}).'
+        return (
+            f'Рецепт: {self.recipe}, ингредиент:'
+            f'{self.ingredient} ({self.amount}).'
+        )
 
 
 class Recipe(models.Model):
@@ -39,11 +53,6 @@ class Recipe(models.Model):
     )
     text = models.TextField(verbose_name='Текст')
     image = models.ImageField(upload_to='recipes/', verbose_name='Изображение')
-    ingredients = models.ManyToManyField(
-        RecipeIngredient,
-        related_name='recipes',
-        verbose_name='Ингредиенты'
-    )
     tags = models.ManyToManyField(
         Tag,
         related_name='recipes',
@@ -67,7 +76,7 @@ class Recipe(models.Model):
 
         verbose_name = 'Рецепт'
         verbose_name_plural = 'Рецепты'
-        ordering = ('name',)
+        ordering = ('-date_created', 'name',)
 
     def __str__(self):
         """Строковое представление рецепта."""

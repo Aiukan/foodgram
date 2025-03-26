@@ -8,7 +8,7 @@ from api.serializers import Base64ImageField
 User = get_user_model()
 
 
-class AvatarUserCreateSerializer(UserCreateSerializer):
+class AvatarUserSerializer(UserCreateSerializer):
     """Сериализатор AvatarUser."""
 
     avatar = avatar = Base64ImageField(read_only=True)

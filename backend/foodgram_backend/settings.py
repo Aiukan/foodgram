@@ -128,9 +128,9 @@ AUTH_USER_MODEL = 'avatar_user.AvatarUser'
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'SERIALIZERS': {
-        'user_create': 'avatar_user.serializers.AvatarUserCreateSerializer',
-        'user': 'avatar_user.serializers.AvatarUserCreateSerializer',
-        'current_user': 'avatar_user.serializers.AvatarUserCreateSerializer',
+        'user_create': 'avatar_user.serializers.AvatarUserSerializer',
+        'user': 'avatar_user.serializers.AvatarUserSerializer',
+        'current_user': 'avatar_user.serializers.AvatarUserSerializer',
     },
     'PERMISSIONS': {
         'user_list': REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'],
