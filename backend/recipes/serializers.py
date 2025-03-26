@@ -6,6 +6,7 @@ from .models import Recipe, RecipeIngredient
 from avatar_user.serializers import AvatarUserSerializer
 from tags.serializers import TagSerializer
 from api.serializers import Base64ImageField
+from shopping_cart.models import ShoppingCart
 
 
 class RecipeIngredientSerializer(serializers.ModelSerializer):
@@ -35,6 +36,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     author = AvatarUserSerializer(read_only=True)
     tags = TagSerializer(many=True)
     image = Base64ImageField()
+    is_in_shopping_cart = serializers.SerializerMethodField()
 
     class Meta:
         """Мета-информация сериализатора Recipe."""
@@ -48,7 +50,8 @@ class RecipeSerializer(serializers.ModelSerializer):
             'tags',
             'cooking_time',
             'author',
-            'image'
+            'image',
+            'is_in_shopping_cart'
         )
         read_only_fields = ('id',)
         model = Recipe
@@ -56,7 +59,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         ingredients_data = validated_data.pop('ingredients')
         request = self.context.get('request')
-        if request and request.user:
+        if request and request.user and request.user.is_authenticated:
             validated_data['author'] = request.user
         recipe = super().create(validated_data)
         self._create_ingredients(recipe, ingredients_data)
@@ -79,3 +82,12 @@ class RecipeSerializer(serializers.ModelSerializer):
             for ingredient_data in ingredients_data
         ]
         RecipeIngredient.objects.bulk_create(ingredients)
+
+    def get_is_in_shopping_cart(self, obj):
+        request = self.context.get('request')
+        if request and request.user and request.user.is_authenticated:
+            return ShoppingCart.objects.filter(
+                recipe=obj,
+                user=request.user
+            ).exists()
+        return False
