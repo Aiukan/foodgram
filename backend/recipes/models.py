@@ -30,17 +30,14 @@ class RecipeIngredient(models.Model):
     class Meta:
         """Мета-информация RecipeIngredient."""
 
-        verbose_name = 'Ингредиент в рецепте'
-        verbose_name_plural = 'Ингредиенты в рецепте'
+        verbose_name = 'Ингредиент'
+        verbose_name_plural = 'Ингредиенты'
         unique_together = ('recipe', 'ingredient')
         ordering = ('pk',)
 
     def __str__(self):
         """Строковое представление RecipeIngredient."""
-        return (
-            f'Рецепт: {self.recipe}, ингредиент:'
-            f'{self.ingredient} ({self.amount}).'
-        )
+        return f'{self.recipe} - {self.ingredient} ({self.amount})'
 
 
 class Recipe(models.Model):
@@ -80,4 +77,4 @@ class Recipe(models.Model):
 
     def __str__(self):
         """Строковое представление рецепта."""
-        return f'Рецепт: {self.name}'
+        return f'{self.name}'

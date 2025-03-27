@@ -26,4 +26,4 @@ class Ingredient(models.Model):
 
     def __str__(self):
         """Строковое представление ингредиента."""
-        return f'Ингредиент: {self.name} ({self.measurement_unit})'
+        return f'{self.name} ({self.measurement_unit})'
