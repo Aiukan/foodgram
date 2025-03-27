@@ -1,0 +1,1 @@
+docker compose -f docker-compose.yml exec backend python manage.py dumpdata --indent 2 > data/full_data.json
