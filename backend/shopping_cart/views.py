@@ -3,8 +3,13 @@ from rest_framework import status, permissions
 from django.shortcuts import get_object_or_404
 from .models import ShoppingCart
 from recipes.models import Recipe
-from .serializers import ShoppingCartSerializer
+from recipes.serializers import ShortCardRecipeSerializer
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
+from django.http import HttpResponse
+from collections import defaultdict
+
+INGREDIENT_FORMAT = '  * {} - {}'
 
 
 class ShoppingCartView(APIView):
@@ -22,7 +27,7 @@ class ShoppingCartView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
         ShoppingCart.objects.create(user=user, recipe=recipe)
-        serializer = ShoppingCartSerializer(
+        serializer = ShortCardRecipeSerializer(
             recipe,
             context={'request': request}
         )
@@ -45,3 +50,29 @@ class ShoppingCartView(APIView):
             {"message": "Рецепт успешно удален из списка покупок."},
             status=status.HTTP_204_NO_CONTENT
         )
+
+
+@api_view(('GET',))
+def download_shopping_cart(request):
+    if not request.user.is_authenticated:
+        return Response(
+            {"error": "Пользователь не авторизован."},
+            status=status.HTTP_401_UNAUTHORIZED
+        )
+    user = request.user
+    total_ingredients = defaultdict(int)
+    recipes = Recipe.objects.filter(shopping_cart__user=user)
+    for recipe in recipes:
+        for recipe_ingredient in recipe.ingredients.all():
+            total_ingredients[recipe_ingredient.ingredient.name] += (
+                recipe_ingredient.amount
+            )
+    point_format_entries = [
+        INGREDIENT_FORMAT.format(ingredient, amount)
+        for ingredient, amount in total_ingredients.items()
+    ]
+    content = 'Полный список ингредиентов:\n'
+    content += '\n'.join(point_format_entries)
+    response = HttpResponse(content, content_type='text/plain')
+    response['Content-Disposition'] = 'attachment; filename="sample.txt"'
+    return response

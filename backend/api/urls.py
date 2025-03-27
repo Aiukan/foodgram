@@ -4,10 +4,12 @@ from django.urls import include, path
 from rest_framework import routers
 
 from tags.views import TagViewSet
-from recipes.views import RecipeViewSet
+from recipes.views import RecipeViewSet, get_short_recipe_url
 from ingredients.views import IngredientViewSet
 from avatar_user.views import AvatarView
-from shopping_cart.views import ShoppingCartView
+from shopping_cart.views import ShoppingCartView, download_shopping_cart
+from favorite.views import FavoriteView
+from subscriptions.views import SubscriptionView, SubscriptionListView
 
 
 router = routers.DefaultRouter()
@@ -22,6 +24,36 @@ urlpatterns = [
         'recipes/<int:id>/shopping_cart/',
         ShoppingCartView.as_view(),
         name='shopping-cart'
+    ),
+    path(
+        'recipes/<int:id>/favorite/',
+        FavoriteView.as_view(),
+        name='favorite'
+    ),
+    path(
+        'users/<int:id>/subscribe/',
+        SubscriptionView.as_view(),
+        name='subscribtion-list'
+    ),
+    path(
+        'users/subscriptions/',
+        SubscriptionListView.as_view(),
+        name='subscribe'
+    ),
+    path(
+        'users/<int:id>/subscribe/',
+        get_short_recipe_url,
+        name='get-short-recipe-url'
+    ),
+    path(
+        'recipes/download_shopping_cart/',
+        download_shopping_cart,
+        name='download-shopping-cart'
+    ),
+    path(
+        'recipes/<int:id>/get-link/',
+        get_short_recipe_url,
+        name='get-short-recipe-url'
     ),
     path('', include(router.urls)),
     path('', include('djoser.urls')),

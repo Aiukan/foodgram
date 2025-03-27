@@ -1,3 +1,31 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+from recipes.models import Recipe
 
-# Create your models here.
+User = get_user_model()
+
+
+class Favorite(models.Model):
+    """Модель списка избранного."""
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='farovite_recipes'
+    )
+    recipe = models.ForeignKey(
+        Recipe,
+        on_delete=models.CASCADE,
+        related_name='farovite_users'
+    )
+
+    class Meta:
+        """Мета-информация Favorite."""
+
+        verbose_name = 'Избранное'
+        verbose_name_plural = 'Избранное'
+        unique_together = ('recipe', 'user')
+
+    def __str__(self):
+        """Строковое представление избранного."""
+        return f'Избранное: {self.user} - {self.recipe}.'

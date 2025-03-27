@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'recipes.apps.RecipesConfig',
     'avatar_user.apps.AvatarUserConfig',
     'shopping_cart.apps.ShoppingCartConfig',
+    'favorite.apps.FavoriteConfig',
+    'subscriptions.apps.SubscriptionsConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +137,7 @@ DJOSER = {
     },
     'PERMISSIONS': {
         'user_list': REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'],
+        'user': REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'],
     },
     'HIDE_USERS': False,
 }
@@ -142,3 +145,5 @@ DJOSER = {
 AUTHENTICATION_BACKENDS = [
     "djoser.auth_backends.LoginFieldBackend",
 ]
+
+DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))

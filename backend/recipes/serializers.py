@@ -7,6 +7,7 @@ from avatar_user.serializers import AvatarUserSerializer
 from tags.serializers import TagSerializer
 from api.serializers import Base64ImageField
 from shopping_cart.models import ShoppingCart
+from favorite.models import Favorite
 
 
 class RecipeIngredientSerializer(serializers.ModelSerializer):
@@ -37,6 +38,7 @@ class RecipeSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True)
     image = Base64ImageField()
     is_in_shopping_cart = serializers.SerializerMethodField()
+    is_favorited = serializers.SerializerMethodField()
 
     class Meta:
         """Мета-информация сериализатора Recipe."""
@@ -51,7 +53,8 @@ class RecipeSerializer(serializers.ModelSerializer):
             'cooking_time',
             'author',
             'image',
-            'is_in_shopping_cart'
+            'is_in_shopping_cart',
+            'is_favorited'
         )
         read_only_fields = ('id',)
         model = Recipe
@@ -91,3 +94,24 @@ class RecipeSerializer(serializers.ModelSerializer):
                 user=request.user
             ).exists()
         return False
+
+    def get_is_favorited(self, obj):
+        request = self.context.get('request')
+        if request and request.user and request.user.is_authenticated:
+            return Favorite.objects.filter(
+                recipe=obj,
+                user=request.user
+            ).exists()
+        return False
+
+
+class ShortCardRecipeSerializer(serializers.ModelSerializer):
+    """Сериализатор короткого описания Recipe."""
+
+    image = Base64ImageField()
+
+    class Meta:
+        """Мета-информация сериализатора короткого описания Recipe."""
+
+        fields = ('id', 'name', 'image', 'cooking_time')
+        model = Recipe
