@@ -21,6 +21,7 @@ class ShoppingCartInline(admin.TabularInline):
     model = ShoppingCart
     extra = 1
 
+
 class CustomUserAdmin(UserAdmin):
     model = AvatarUser
     list_display = (

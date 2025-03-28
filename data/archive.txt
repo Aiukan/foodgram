@@ -1,2 +1,0 @@
-docker compose -f docker-compose.yml exec db psql -U kana -d foodgram -f /data/ingredients.sql
-docker compose -f docker-compose.yml exec db psql -U kana -d foodgram -f /data/tags.sql
