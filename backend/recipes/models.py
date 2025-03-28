@@ -4,6 +4,7 @@ import os
 from django.contrib.auth import get_user_model
 from django.core import validators
 from django.db import models
+
 from ingredients.models import Ingredient
 from tags.models import Tag
 
@@ -11,7 +12,8 @@ User = get_user_model()
 
 
 class RecipeIngredient(models.Model):
-    """Связь ингредиента и рецепта."""
+    """Связь ингредиентов и рецептов."""
+
     ingredient = models.ForeignKey(
         Ingredient,
         on_delete=models.CASCADE,

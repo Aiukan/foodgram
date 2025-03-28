@@ -1,8 +1,10 @@
+"""Сериализаторы subscriptions."""
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer
 from rest_framework import serializers
+
 from avatar_user.serializers import AvatarUserSerializer
-from django.contrib.auth import get_user_model
 from recipes.models import Recipe
 from recipes.serializers import ShortCardRecipeSerializer
 
@@ -16,6 +18,8 @@ class SubscriptionsSerializer(AvatarUserSerializer):
     recipes_count = serializers.SerializerMethodField()
 
     class Meta(UserCreateSerializer.Meta):
+        """Мета-информация сериализатора подписок."""
+
         model = User
         fields = (
             'id', 'email', 'username',
@@ -24,6 +28,7 @@ class SubscriptionsSerializer(AvatarUserSerializer):
         )
 
     def get_recipes(self, obj):
+        """Получение нескольких рецептов пользователя."""
         request = self.context.get('request')
         recipes_limit = request.query_params.get(
             "recipes_limit", settings.DEFAULT_RECIPES_LIMIT
@@ -36,4 +41,5 @@ class SubscriptionsSerializer(AvatarUserSerializer):
         return ShortCardRecipeSerializer(recipes, many=True).data
 
     def get_recipes_count(self, obj):
+        """Получение количества рецептов пользователя."""
         return Recipe.objects.filter(author=obj).count()

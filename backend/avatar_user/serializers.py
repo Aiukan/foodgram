@@ -1,8 +1,8 @@
 """Сериализаторы avatar_user."""
-
+from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer
 from rest_framework import serializers
-from django.contrib.auth import get_user_model
+
 from api.serializers import Base64ImageField
 from subscriptions.models import Subscription
 
@@ -16,6 +16,8 @@ class AvatarUserSerializer(UserCreateSerializer):
     is_subscribed = serializers.SerializerMethodField()
 
     class Meta(UserCreateSerializer.Meta):
+        """Мета-информация сериализатора AvatarUser."""
+
         model = User
         fields = (
             'id', 'email', 'username',
@@ -24,6 +26,7 @@ class AvatarUserSerializer(UserCreateSerializer):
         )
 
     def get_is_subscribed(self, obj):
+        """Получение информации о подписке на пользователя."""
         request = self.context.get('request')
         if request and request.user and request.user.is_authenticated:
             return Subscription.objects.filter(
@@ -35,6 +38,7 @@ class AvatarUserSerializer(UserCreateSerializer):
 
 class AvatarSerializer(serializers.ModelSerializer):
     """Сериализатор аватара пользователя."""
+
     avatar = Base64ImageField()
 
     class Meta:

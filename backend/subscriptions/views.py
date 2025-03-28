@@ -1,13 +1,16 @@
-from rest_framework.response import Response
-from rest_framework import status, permissions
-from django.shortcuts import get_object_or_404
-from .models import Subscription
-from rest_framework.views import APIView
-from avatar_user.serializers import AvatarUserSerializer
-from rest_framework.generics import ListAPIView
-from rest_framework.permissions import IsAuthenticated
+"""Представления subscriptions."""
 from django.contrib.auth import get_user_model
 from django.db.models import Exists, OuterRef
+from django.shortcuts import get_object_or_404
+from rest_framework import permissions, status
+from rest_framework.generics import ListAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from avatar_user.serializers import AvatarUserSerializer
+
+from .models import Subscription
 from .serializers import SubscriptionsSerializer
 
 User = get_user_model()
@@ -70,6 +73,7 @@ class SubscriptionListView(ListAPIView):
     serializer_class = SubscriptionsSerializer
 
     def get_queryset(self):
+        """Получение всех подписок пользователя."""
         user = self.request.user
         if not user.is_authenticated:
             return User.objects.none()

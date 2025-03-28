@@ -1,13 +1,14 @@
 """Сериализаторы recipes."""
 from rest_framework import serializers
 
-from ingredients.models import Ingredient
-from .models import Recipe, RecipeIngredient
-from avatar_user.serializers import AvatarUserSerializer
-from tags.serializers import TagSerializer
 from api.serializers import Base64ImageField
-from shopping_cart.models import ShoppingCart
+from avatar_user.serializers import AvatarUserSerializer
 from favorite.models import Favorite
+from ingredients.models import Ingredient
+from shopping_cart.models import ShoppingCart
+from tags.serializers import TagSerializer
+
+from .models import Recipe, RecipeIngredient
 
 
 class RecipeIngredientSerializer(serializers.ModelSerializer):
@@ -60,6 +61,11 @@ class RecipeSerializer(serializers.ModelSerializer):
         model = Recipe
 
     def create(self, validated_data):
+        """Переопределение метода create.
+
+        Добавление пользователя данной сессии к данным и
+        раздельная обработка ингредиентов.
+        """
         ingredients_data = validated_data.pop('ingredients')
         request = self.context.get('request')
         if request and request.user and request.user.is_authenticated:
@@ -69,6 +75,10 @@ class RecipeSerializer(serializers.ModelSerializer):
         return recipe
 
     def update(self, instance, validated_data):
+        """Переопределение метода update.
+
+        Раздельная обработка ингредиентов.
+        """
         ingredients_data = validated_data.pop('ingredients', [])
         instance = super().update(instance, validated_data)
         instance.ingredients.all().delete()
@@ -76,6 +86,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         return instance
 
     def _create_ingredients(self, recipe, ingredients_data):
+        """Внутренний метод для обработки ингредиентов."""
         ingredients = [
             RecipeIngredient(
                 recipe=recipe,
@@ -87,6 +98,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         RecipeIngredient.objects.bulk_create(ingredients)
 
     def get_is_in_shopping_cart(self, obj):
+        """Получение информации о наличии в списке покупок."""
         request = self.context.get('request')
         if request and request.user and request.user.is_authenticated:
             return ShoppingCart.objects.filter(
@@ -96,6 +108,7 @@ class RecipeSerializer(serializers.ModelSerializer):
         return False
 
     def get_is_favorited(self, obj):
+        """Получение информации о наличии в избранном."""
         request = self.context.get('request')
         if request and request.user and request.user.is_authenticated:
             return Favorite.objects.filter(

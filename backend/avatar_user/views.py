@@ -1,8 +1,10 @@
-from rest_framework import views, status
-from rest_framework.permissions import IsAuthenticated
+"""Представления avatar_user."""
 from django.core.files.storage import default_storage
-from .serializers import AvatarSerializer
+from rest_framework import status, views
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+
+from .serializers import AvatarSerializer
 
 
 class AvatarView(views.APIView):
@@ -11,6 +13,7 @@ class AvatarView(views.APIView):
     permission_classes = (IsAuthenticated,)
 
     def put(self, request, *args, **kwargs):
+        """Переопределние метода put для загрузки аватара пользователя."""
         serializer = AvatarSerializer(
             instance=request.user,
             data=request.data,
@@ -24,6 +27,7 @@ class AvatarView(views.APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, *args, **kwargs):
+        """Переопределние метода delete для удаления аватара пользователя."""
         user = request.user
         if user.avatar:
             default_storage.delete(user.avatar.path)

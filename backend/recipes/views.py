@@ -1,21 +1,24 @@
 """Представления recipes."""
-from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from .models import Recipe
-from tags.models import Tag
-import django_filters
-from django_filters.rest_framework import DjangoFilterBackend
-from .serializers import RecipeSerializer
-from rest_framework.decorators import api_view
 import base62
-from django.http import JsonResponse, HttpResponseRedirect
-from django.http import HttpResponseNotFound
+import django_filters
 from django.db.models import Exists, OuterRef
+from django.http import (HttpResponseNotFound, HttpResponseRedirect,
+                         JsonResponse)
+from rest_framework import viewsets
+from rest_framework.decorators import api_view
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 from favorite.models import Favorite
 from shopping_cart.models import ShoppingCart
+from tags.models import Tag
+
+from .models import Recipe
+from .serializers import RecipeSerializer
 
 
 class RecipeFilter(django_filters.FilterSet):
+    """Фильтр вьюсета RecipeViewSet."""
+
     tags = django_filters.ModelMultipleChoiceFilter(
         field_name="tags__slug",
         to_field_name="slug",
@@ -31,10 +34,13 @@ class RecipeFilter(django_filters.FilterSet):
     )
 
     class Meta:
+        """Мета-информация RecipeFilter."""
+
         model = Recipe
         fields = ('tags', 'author')
 
     def filter_is_favorited(self, queryset, _, value):
+        """Фильтр проверки нахождения в избранном."""
         user = self.request.user
         if not user.is_authenticated:
             return queryset.none()
@@ -45,6 +51,7 @@ class RecipeFilter(django_filters.FilterSet):
         )
 
     def filter_is_in_shopping_cart(self, queryset, _, value):
+        """Фильтр проверки нахождения в списке покупок."""
         user = self.request.user
         if not user.is_authenticated:
             return queryset.none()
@@ -65,12 +72,13 @@ class RecipeViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticatedOrReadOnly,)
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
-    filter_backends = (DjangoFilterBackend,)
+    filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
     filterset_class = RecipeFilter
 
 
 @api_view(('GET',))
 def get_short_recipe_url(request, id):
+    """Представление для получения короткой ссылки на рецепт."""
     encoded_id = base62.encode(id)
     short_url = request.build_absolute_uri(f'/s/{encoded_id}')
     return JsonResponse({'short-link': short_url})
@@ -78,6 +86,7 @@ def get_short_recipe_url(request, id):
 
 @api_view(('GET',))
 def short_recipe_url(request, encoded):
+    """Представление для перехода на страницу рецепта по короткой ссылке."""
     try:
         id = base62.decode(encoded)
     except ValueError:

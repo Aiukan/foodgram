@@ -1,13 +1,17 @@
-from rest_framework.response import Response
-from rest_framework import status, permissions
+"""Представления shopping_cart."""
+from collections import defaultdict
+
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
-from .models import ShoppingCart
+from rest_framework import permissions, status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from recipes.models import Recipe
 from recipes.serializers import ShortCardRecipeSerializer
-from rest_framework.views import APIView
-from rest_framework.decorators import api_view
-from django.http import HttpResponse
-from collections import defaultdict
+
+from .models import ShoppingCart
 
 INGREDIENT_FORMAT = '  * {} - {}'
 
@@ -54,6 +58,7 @@ class ShoppingCartView(APIView):
 
 @api_view(('GET',))
 def download_shopping_cart(request):
+    """Представление для загрузки файла списка покупок."""
     if not request.user.is_authenticated:
         return Response(
             {"error": "Пользователь не авторизован."},

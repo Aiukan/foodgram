@@ -1,22 +1,19 @@
 """URL эндпоинты API проекта foodgram_backend."""
-
 from django.urls import include, path
 from rest_framework import routers
 
-from tags.views import TagViewSet
-from recipes.views import RecipeViewSet, get_short_recipe_url
-from ingredients.views import IngredientViewSet
 from avatar_user.views import AvatarView
-from shopping_cart.views import ShoppingCartView, download_shopping_cart
 from favorite.views import FavoriteView
-from subscriptions.views import SubscriptionView, SubscriptionListView
-
+from ingredients.views import IngredientViewSet
+from recipes.views import RecipeViewSet, get_short_recipe_url
+from shopping_cart.views import ShoppingCartView, download_shopping_cart
+from subscriptions.views import SubscriptionListView, SubscriptionView
+from tags.views import TagViewSet
 
 router = routers.DefaultRouter()
 router.register('tags', TagViewSet, basename='tags')
 router.register('recipes', RecipeViewSet, basename='recipes')
 router.register('ingredients', IngredientViewSet, basename='ingredients')
-
 
 urlpatterns = [
     path('users/me/avatar/', AvatarView.as_view(), name='avatar'),
