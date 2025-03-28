@@ -13,7 +13,7 @@ from recipes.serializers import ShortCardRecipeSerializer
 
 from .models import ShoppingCart
 
-INGREDIENT_FORMAT = '* {} ({}) — {}'
+INGREDIENT_FORMAT = '* {} — {}'
 
 
 class ShoppingCartView(APIView):
@@ -69,19 +69,22 @@ def download_shopping_cart(request):
     recipes = Recipe.objects.filter(shopping_cart__user=user)
     for recipe in recipes:
         for recipe_ingredient in recipe.ingredients.all():
-            total_ingredients[recipe_ingredient.ingredient.name] += (
+            full_name = (
+                f'{recipe_ingredient.ingredient.name} '
+                f'({recipe_ingredient.ingredient.measurement_unit})'
+            )
+            total_ingredients[full_name] += (
                 recipe_ingredient.amount
             )
     point_format_entries = [
         INGREDIENT_FORMAT.format(
             ingredient,
-            ingredient.measurement_unit,
             amount
         )
         for ingredient, amount in total_ingredients.items()
     ]
     content = 'Полный список ингредиентов:\n'
-    content += '\n'.join(point_format_entries)
+    content += ';\n'.join(point_format_entries) + '.'
     response = HttpResponse(content, content_type='text/plain')
     response['Content-Disposition'] = 'attachment; filename="sample.txt"'
     return response
