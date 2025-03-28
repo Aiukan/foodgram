@@ -13,7 +13,7 @@ from recipes.serializers import ShortCardRecipeSerializer
 
 from .models import ShoppingCart
 
-INGREDIENT_FORMAT = '  * {} - {}'
+INGREDIENT_FORMAT = '* {} ({}) — {}'
 
 
 class ShoppingCartView(APIView):
@@ -73,7 +73,11 @@ def download_shopping_cart(request):
                 recipe_ingredient.amount
             )
     point_format_entries = [
-        INGREDIENT_FORMAT.format(ingredient, amount)
+        INGREDIENT_FORMAT.format(
+            ingredient,
+            ingredient.measurement_unit,
+            amount
+        )
         for ingredient, amount in total_ingredients.items()
     ]
     content = 'Полный список ингредиентов:\n'

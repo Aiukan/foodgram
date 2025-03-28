@@ -8,6 +8,7 @@ from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
+from avatar_user.permissions import IsAuthorOrReadOnly
 from favorite.models import Favorite
 from shopping_cart.models import ShoppingCart
 from tags.models import Tag
@@ -69,7 +70,7 @@ class RecipeFilter(django_filters.FilterSet):
 class RecipeViewSet(viewsets.ModelViewSet):
     """Вьюсет модели Recipe."""
 
-    permission_classes = (IsAuthenticatedOrReadOnly,)
+    permission_classes = (IsAuthenticatedOrReadOnly, IsAuthorOrReadOnly)
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     filter_backends = (django_filters.rest_framework.DjangoFilterBackend,)
