@@ -15,7 +15,7 @@ class RecipeAdmin(admin.ModelAdmin):
     """Модель админ-зоны Recipe."""
 
     list_display = (
-        'name', 'get_author_username', 'date_created', 'favorite_count'
+        'name', 'get_author_username', 'date_created'
     )
     search_fields = ('name', 'author__username')
     list_filter = ('tags', 'date_created', 'cooking_time')

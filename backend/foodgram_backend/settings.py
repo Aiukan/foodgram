@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
     'djoser',
+    'debug_toolbar',
     'api.apps.ApiConfig',
     'tags.apps.TagsConfig',
     'ingredients.apps.IngredientsConfig',
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,8 +122,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 6,
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
 }
 
 FORBIDDEN_USERNAMES = ('me',)
@@ -131,13 +133,13 @@ AUTH_USER_MODEL = 'avatar_user.AvatarUser'
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'SERIALIZERS': {
-        'user_create': 'avatar_user.serializers.AvatarUserSerializer',
+        'user_create': 'avatar_user.serializers.AvatarUserCreationSerializer',
         'user': 'avatar_user.serializers.AvatarUserSerializer',
         'current_user': 'avatar_user.serializers.AvatarUserSerializer',
     },
     'PERMISSIONS': {
-        'user_list': REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'],
-        'user': REST_FRAMEWORK['DEFAULT_PERMISSION_CLASSES'],
+        'user_list': ['rest_framework.permissions.AllowAny'],
+        'user': ['rest_framework.permissions.AllowAny'],
     },
     'HIDE_USERS': False,
 }
@@ -147,3 +149,33 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
+]
+
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK": lambda request: True,
+}
+
+"""LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "loggers": {
+        "django.db.backends": {
+            "level": "DEBUG",
+            "handlers": ["console"],
+            "propagate": False,
+        },
+    },
+}"""
+
+MAX_FIRST_NAME_LENGTH = int(os.getenv('MAX_FIRST_NAME_LENGTH', '150'))
+
+MAX_LAST_NAME_LENGTH = int(os.getenv('MAX_LAST_NAME_LENGTH', '150'))

@@ -8,8 +8,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from avatar_user.serializers import AvatarUserSerializer
-
 from .models import Subscription
 from .serializers import SubscriptionsSerializer
 
@@ -38,7 +36,7 @@ class SubscriptionView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
         Subscription.objects.create(user_from=user_from, user_to=user_to)
-        serializer = AvatarUserSerializer(
+        serializer = SubscriptionsSerializer(
             user_to,
             context={'request': request}
         )
@@ -54,16 +52,10 @@ class SubscriptionView(APIView):
         if not subscription_entry.exists():
             return Response(
                 {"error": "Подписка на данного пользователя не найдена."},
-                status=status.HTTP_404_NOT_FOUND
+                status=status.HTTP_400_BAD_REQUEST
             )
         subscription_entry.delete()
-        return Response(
-            {"message": (
-                'Вы успешно отписались от пользователя '
-                f'{user_to.username}.'
-            )},
-            status=status.HTTP_204_NO_CONTENT
-        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class SubscriptionListView(ListAPIView):

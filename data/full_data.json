@@ -104,6 +104,591 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-03-28T10:29:00.644Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "ddd2@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0418\\u0437\\u0431\\u0440\\u0430\\u043d\\u043d\\u043e\\u0435\", \"object\": \"\\u0418\\u0437\\u0431\\u0440\\u0430\\u043d\\u043d\\u043e\\u0435: ddd2@ya.ru - babaaf.\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-03-28T10:29:15.529Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "ddd2@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0417\\u0430\\u043f\\u0438\\u0441\\u044c \\u0441\\u043f\\u0438\\u0441\\u043a\\u0430 \\u043f\\u043e\\u043a\\u0443\\u043f\\u043e\\u043a\", \"object\": \"\\u0417\\u0430\\u043f\\u0438\\u0441\\u044c: ddd2@ya.ru - abc.\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-03-28T18:33:09.824Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "ddd@ya.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-03-28T18:33:15.997Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "dddd@ya.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-03-28T18:33:21.244Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "ddd2@ya.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-03-28T18:35:10.696Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-03-28T18:40:17.310Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 AgaDmi@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 AvdDam@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 MedEva@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 LitAle@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 MorVad@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 SobAna@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 LebEgo@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 SorAle@ya.ru.\"}}, {\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 LazMak@ya.ru.\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-03-28T18:40:38.288Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 LavDar@ya.ru.\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-03-28T18:40:55.145Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"deleted\": {\"name\": \"\\u041f\\u043e\\u0434\\u043f\\u0438\\u0441\\u043a\\u0430\", \"object\": \"\\u041f\\u043e\\u043b\\u044c\\u0437\\u043e\\u0432\\u0430\\u0442\\u0435\\u043b\\u044c LavDar@ya.ru \\u043f\\u043e\\u0434\\u043f\\u0438\\u0441\\u0430\\u043d \\u043d\\u0430 LavDar@ya.ru.\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-03-28T18:46:12.639Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-03-28T19:08:20.500Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "Клубничный джем",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043b\\u0443\\u0431\\u043d\\u0438\\u0447\\u043d\\u044b\\u0439 \\u0434\\u0436\\u0435\\u043c - \\u043b\\u0438\\u043c\\u043e\\u043d\\u044b (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043b\\u0443\\u0431\\u043d\\u0438\\u0447\\u043d\\u044b\\u0439 \\u0434\\u0436\\u0435\\u043c - \\u043a\\u043b\\u0443\\u0431\\u043d\\u0438\\u043a\\u0430 (\\u0433) (500)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043b\\u0443\\u0431\\u043d\\u0438\\u0447\\u043d\\u044b\\u0439 \\u0434\\u0436\\u0435\\u043c - \\u0441\\u0430\\u0445\\u0430\\u0440 (\\u0433) (350)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-03-28T19:08:56.993Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "Клубничный джем",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-03-28T19:13:44.059Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-03-28T19:15:25.033Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "LavDar@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-03-28T19:15:35.398Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "AgaDmi@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-03-28T19:15:45.520Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "AvdDam@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-03-28T19:15:54.642Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "MedEva@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-03-28T19:16:07.958Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "LitAle@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-03-28T19:16:18.705Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "SobAna@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-03-28T19:16:25.731Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "14",
+    "object_repr": "LazMak@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-03-28T19:16:34.195Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "SorAle@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-03-28T19:16:42.734Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "LebEgo@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-03-28T19:16:50.760Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "MorVad@ya.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Avatar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-03-28T19:25:25.416Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "Штрудель с яблоками",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u043c\\u0443\\u043a\\u0430 (\\u0433) (300)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u044f\\u0439\\u0446\\u0430 \\u043a\\u0443\\u0440\\u0438\\u043d\\u044b\\u0435 (\\u0433) (100)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u0441\\u043b\\u0438\\u0432\\u043e\\u0447\\u043d\\u043e\\u0435 \\u043c\\u0430\\u0441\\u043b\\u043e (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u0432\\u043e\\u0434\\u0430 (\\u043c\\u043b) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u0441\\u0430\\u0445\\u0430\\u0440 (\\u0433) (100)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u0441\\u043e\\u043b\\u044c (\\u0433) (3)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0428\\u0442\\u0440\\u0443\\u0434\\u0435\\u043b\\u044c \\u0441 \\u044f\\u0431\\u043b\\u043e\\u043a\\u0430\\u043c\\u0438 - \\u044f\\u0431\\u043b\\u043e\\u043a\\u0438 (\\u0433) (500)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-03-28T19:29:33.312Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "Цыпленок табака",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0446\\u044b\\u043f\\u043b\\u044f\\u0442\\u0430 (\\u0433) (600)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0441\\u043b\\u0438\\u0432\\u043e\\u0447\\u043d\\u043e\\u0435 \\u043c\\u0430\\u0441\\u043b\\u043e (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0440\\u0430\\u0441\\u0442\\u0438\\u0442\\u0435\\u043b\\u044c\\u043d\\u043e\\u0435 \\u043c\\u0430\\u0441\\u043b\\u043e (\\u043c\\u043b) (20)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0447\\u0435\\u0441\\u043d\\u043e\\u043a (\\u0433) (15)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0441\\u043e\\u043b\\u044c \\u043a\\u0440\\u0443\\u043f\\u043d\\u043e\\u0433\\u043e \\u043f\\u043e\\u043c\\u043e\\u043b\\u0430 (\\u0433) (5)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0426\\u044b\\u043f\\u043b\\u0435\\u043d\\u043e\\u043a \\u0442\\u0430\\u0431\\u0430\\u043a\\u0430 - \\u0432\\u043e\\u0434\\u0430 (\\u043c\\u043b) (130)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-03-28T19:33:48.650Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "23",
+    "object_repr": "Салат Греческий",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043f\\u043e\\u043c\\u0438\\u0434\\u043e\\u0440\\u044b (\\u0433) (150)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043e\\u0433\\u0443\\u0440\\u0446\\u044b (\\u0433) (250)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043f\\u0435\\u0440\\u0435\\u0446 \\u0431\\u043e\\u043b\\u0433\\u0430\\u0440\\u0441\\u043a\\u0438\\u0439 (\\u0433) (120)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043b\\u0443\\u043a \\u043a\\u0440\\u0430\\u0441\\u043d\\u044b\\u0439 (\\u0433) (70)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043c\\u0430\\u0441\\u043b\\u0438\\u043d\\u044b (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u0444\\u0435\\u0442\\u0430 (\\u0433) (120)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043e\\u043b\\u0438\\u0432\\u043a\\u043e\\u0432\\u043e\\u0435 \\u043c\\u0430\\u0441\\u043b\\u043e (\\u0433) (40)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u0430\\u043b\\u0430\\u0442 \\u0413\\u0440\\u0435\\u0447\\u0435\\u0441\\u043a\\u0438\\u0439 - \\u043a\\u0440\\u0430\\u0441\\u043d\\u044b\\u0439 \\u0432\\u0438\\u043d\\u043d\\u044b\\u0439 \\u0441\\u043e\\u0443\\u0441 (\\u0433) (40)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-03-29T10:11:01.701Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2187",
+    "object_repr": "грибы маитаке (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-03-29T10:11:50.451Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "Соте из курицы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u043e\\u0442\\u0435 \\u0438\\u0437 \\u043a\\u0443\\u0440\\u0438\\u0446\\u044b - \\u043a\\u0443\\u0440\\u0438\\u043d\\u044b\\u0435 \\u043e\\u043a\\u043e\\u0440\\u043e\\u0447\\u043a\\u0430 (\\u0433) (650)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u043e\\u0442\\u0435 \\u0438\\u0437 \\u043a\\u0443\\u0440\\u0438\\u0446\\u044b - \\u0441\\u043e\\u043b\\u044c (\\u0433) (5)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u043e\\u0442\\u0435 \\u0438\\u0437 \\u043a\\u0443\\u0440\\u0438\\u0446\\u044b - \\u043f\\u043e\\u043c\\u0438\\u0434\\u043e\\u0440\\u044b \\u0447\\u0435\\u0440\\u0440\\u0438 (\\u0433) (5)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0421\\u043e\\u0442\\u0435 \\u0438\\u0437 \\u043a\\u0443\\u0440\\u0438\\u0446\\u044b - \\u0433\\u0440\\u0438\\u0431\\u044b \\u043c\\u0430\\u0438\\u0442\\u0430\\u043a\\u0435 (\\u0433) (150)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-03-29T10:14:22.489Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2188",
+    "object_repr": "бамбуковые побеги (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-03-29T10:14:39.633Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2189",
+    "object_repr": "зенмай (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-03-29T10:15:52.551Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2190",
+    "object_repr": "мирин (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-03-29T10:16:20.392Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "Такикоми-гохан",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0440\\u0438\\u0441 (\\u0433) (800)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0431\\u0430\\u043c\\u0431\\u0443\\u043a\\u043e\\u0432\\u044b\\u0435 \\u043f\\u043e\\u0431\\u0435\\u0433\\u0438 (\\u0433) (130)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0437\\u0435\\u043d\\u043c\\u0430\\u0439 (\\u0433) (60)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u043a\\u0443\\u0440\\u0438\\u043d\\u044b\\u0435 \\u0431\\u0435\\u0434\\u0440\\u0430 (\\u0433) (150)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u043c\\u043e\\u0440\\u043a\\u043e\\u0432\\u044c (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0442\\u043e\\u0444\\u0443 (\\u0433) (30)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0441\\u043e\\u0435\\u0432\\u044b\\u0439 \\u0441\\u043e\\u0443\\u0441 (\\u0433) (65)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u043c\\u0438\\u0440\\u0438\\u043d (\\u0433) (65)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-03-29T10:17:33.211Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2191",
+    "object_repr": "кинако амазаке (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-03-29T10:19:20.871Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2192",
+    "object_repr": "амазаке (мл)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-03-29T10:19:39.404Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "Кинако амазаке",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u0438\\u043d\\u0430\\u043a\\u043e \\u0430\\u043c\\u0430\\u0437\\u0430\\u043a\\u0435 - \\u0430\\u043c\\u0430\\u0437\\u0430\\u043a\\u0435 (\\u043c\\u043b) (60)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u0438\\u043d\\u0430\\u043a\\u043e \\u0430\\u043c\\u0430\\u0437\\u0430\\u043a\\u0435 - \\u0441\\u043e\\u0435\\u0432\\u0430\\u044f \\u043c\\u0443\\u043a\\u0430 (\\u0433) (13)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u0438\\u043d\\u0430\\u043a\\u043e \\u0430\\u043c\\u0430\\u0437\\u0430\\u043a\\u0435 - \\u043c\\u043e\\u043b\\u043e\\u043a\\u043e (\\u043c\\u043b) (60)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-03-29T10:19:52.496Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2191",
+    "object_repr": "кинако амазаке (г)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-03-29T10:20:37.724Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "Такикоми-гохан",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u0441\\u043e\\u0443\\u0441 \\u043c\\u0438\\u0440\\u0438\\u043d (\\u0433) (65)\", \"fields\": [\"Ingredient\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-03-29T10:20:47.598Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2190",
+    "object_repr": "мирин (мл)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0434\\u0438\\u043d\\u0438\\u0446\\u044b \\u0438\\u0437\\u043c\\u0435\\u0440\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-03-29T10:21:02.114Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "Такикоми-гохан",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u0430\\u043a\\u0438\\u043a\\u043e\\u043c\\u0438-\\u0433\\u043e\\u0445\\u0430\\u043d - \\u043c\\u0438\\u0440\\u0438\\u043d (\\u043c\\u043b) (65)\", \"fields\": [\"Ingredient\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-03-29T10:22:35.512Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2193",
+    "object_repr": "корень лотоса (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-03-29T10:23:54.895Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "27",
+    "object_repr": "Жареный корень лотоса",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0416\\u0430\\u0440\\u0435\\u043d\\u044b\\u0439 \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 - \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 (\\u0433) (250)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0416\\u0430\\u0440\\u0435\\u043d\\u044b\\u0439 \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 - \\u043a\\u0430\\u0440\\u0442\\u043e\\u0444\\u0435\\u043b\\u044c\\u043d\\u044b\\u0439 \\u043a\\u0440\\u0430\\u0445\\u043c\\u0430\\u043b (\\u0433) (45)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0416\\u0430\\u0440\\u0435\\u043d\\u044b\\u0439 \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 - \\u0441\\u043e\\u0435\\u0432\\u044b\\u0439 \\u0441\\u043e\\u0443\\u0441 (\\u0433) (35)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0416\\u0430\\u0440\\u0435\\u043d\\u044b\\u0439 \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 - \\u0441\\u0430\\u0445\\u0430\\u0440 (\\u0433) (15)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0416\\u0430\\u0440\\u0435\\u043d\\u044b\\u0439 \\u043a\\u043e\\u0440\\u0435\\u043d\\u044c \\u043b\\u043e\\u0442\\u043e\\u0441\\u0430 - \\u043f\\u0435\\u0440\\u0435\\u0446 (\\u0433) (10)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-03-29T10:25:57.661Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2194",
+    "object_repr": "конняку (г)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-03-29T10:27:22.152Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "Конняку кинпира",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 \\u043a\\u0438\\u043d\\u043f\\u0438\\u0440\\u0430 - \\u043a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 (\\u0433) (200)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 \\u043a\\u0438\\u043d\\u043f\\u0438\\u0440\\u0430 - \\u043a\\u0443\\u043d\\u0436\\u0443\\u0442\\u043d\\u043e\\u0435 \\u043c\\u0430\\u0441\\u043b\\u043e (\\u0433) (7)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 \\u043a\\u0438\\u043d\\u043f\\u0438\\u0440\\u0430 - \\u0441\\u0430\\u0445\\u0430\\u0440 (\\u0433) (25)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 \\u043a\\u0438\\u043d\\u043f\\u0438\\u0440\\u0430 - \\u0441\\u043e\\u0435\\u0432\\u044b\\u0439 \\u0441\\u043e\\u0443\\u0441 (\\u0433) (35)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041a\\u043e\\u043d\\u043d\\u044f\\u043a\\u0443 \\u043a\\u0438\\u043d\\u043f\\u0438\\u0440\\u0430 - \\u0441\\u0430\\u043a\\u0435 (\\u043c\\u043b) (15)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-03-29T10:36:30.546Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "Маринованный дайкон",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041c\\u0430\\u0440\\u0438\\u043d\\u043e\\u0432\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d - \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d (\\u0433) (250)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041c\\u0430\\u0440\\u0438\\u043d\\u043e\\u0432\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d - \\u0441\\u0430\\u0445\\u0430\\u0440 (\\u0433) (30)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041c\\u0430\\u0440\\u0438\\u043d\\u043e\\u0432\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d - \\u0443\\u043a\\u0441\\u0443\\u0441 (\\u043c\\u043b) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041c\\u0430\\u0440\\u0438\\u043d\\u043e\\u0432\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d - \\u0432\\u043e\\u0434\\u0430 (\\u043c\\u043b) (15)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u041c\\u0430\\u0440\\u0438\\u043d\\u043e\\u0432\\u0430\\u043d\\u043d\\u044b\\u0439 \\u0434\\u0430\\u0439\\u043a\\u043e\\u043d - \\u043a\\u0430\\u0440\\u0440\\u0438 (\\u0433) (3)\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-03-29T10:39:39.436Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "Тонко обжаренное яйцо и капустный суп",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u044f\\u0439\\u0446\\u0430 \\u043a\\u0443\\u0440\\u0438\\u043d\\u044b\\u0435 (\\u0433) (50)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u0430 \\u0431\\u0435\\u043b\\u043e\\u043a\\u043e\\u0447\\u0430\\u043d\\u043d\\u0430\\u044f (\\u0433) (80)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u043c\\u043e\\u0440\\u043a\\u043e\\u0432\\u044c (\\u0433) (30)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u0431\\u0443\\u043b\\u044c\\u043e\\u043d (\\u043c\\u043b) (400)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u0441\\u043e\\u0435\\u0432\\u044b\\u0439 \\u0441\\u043e\\u0443\\u0441 (\\u0433) (7)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u0441\\u043e\\u043b\\u044c (\\u0433) (3)\"}}, {\"added\": {\"name\": \"\\u0418\\u043d\\u0433\\u0440\\u0435\\u0434\\u0438\\u0435\\u043d\\u0442\", \"object\": \"\\u0422\\u043e\\u043d\\u043a\\u043e \\u043e\\u0431\\u0436\\u0430\\u0440\\u0435\\u043d\\u043d\\u043e\\u0435 \\u044f\\u0439\\u0446\\u043e \\u0438 \\u043a\\u0430\\u043f\\u0443\\u0441\\u0442\\u043d\\u044b\\u0439 \\u0441\\u0443\\u043f - \\u043f\\u0435\\u0440\\u0435\\u0446 \\u0447\\u0435\\u0440\\u043d\\u044b\\u0439 (\\u0433) (3)\"}}]"
+  }
+},
+{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -765,18 +1350,18 @@
 },
 {
   "model": "sessions.session",
+  "pk": "8m9cecsj0z02dmym9pmqteb1f31ndbll",
+  "fields": {
+    "session_data": ".eJxVizsOwjAMQO-SGVVJahKXkYGJO0R2bEgAtRKhE-LuFNQB1vd5mkTzo6S56T1VMTvjzOaXMeWrjh8hl2kB3VettHXH6VzHQ9Wb7Nfw7y7UyrJStDEK8yCsg1X2AhRDwGyZwdvegdeA5FFy9ugEIJ4iYxbYhl4BzesNTlA3FQ:1tyF7a:fd-NJ20gglaKb3dC3d2ETFMXF4cp1qupuGxxjubkb9Y",
+    "expire_date": "2025-04-11T19:12:02.966Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "jnopp138bfgmf5uau3tme0o1mkunxds3",
   "fields": {
     "session_data": ".eJxVizsOwjAMQO-SGVVJahKXkYGJO0R2bEgAtRKhE-LuFNQB1vd5mkTzo6S56T1VMTvjzOaXMeWrjh8hl2kB3VettHXH6VzHQ9Wb7Nfw7y7UyrJStDEK8yCsg1X2AhRDwGyZwdvegdeA5FFy9ugEIJ4iYxbYhl4BzesNTlA3FQ:1txOHQ:jZ24cJ1xFGgAGzYOPA408n5gIvWUCld8QMRJVw0Dg-Y",
     "expire_date": "2025-04-09T10:46:40.203Z"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "4e75cdf1fd5654e004d3c8a7bcd88c2c13d0c44d",
-  "fields": {
-    "user": 4,
-    "created": "2025-03-27T11:48:05.841Z"
   }
 },
 {
@@ -18300,150 +18885,650 @@
   }
 },
 {
-  "model": "recipes.recipeingredient",
-  "pk": 7,
+  "model": "ingredients.ingredient",
+  "pk": 2187,
   "fields": {
-    "ingredient": 2,
-    "recipe": 11,
-    "amount": 99
+    "name": "грибы маитаке",
+    "measurement_unit": "г"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2188,
+  "fields": {
+    "name": "бамбуковые побеги",
+    "measurement_unit": "г"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2189,
+  "fields": {
+    "name": "зенмай",
+    "measurement_unit": "г"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2190,
+  "fields": {
+    "name": "мирин",
+    "measurement_unit": "мл"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2192,
+  "fields": {
+    "name": "амазаке",
+    "measurement_unit": "мл"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2193,
+  "fields": {
+    "name": "корень лотоса",
+    "measurement_unit": "г"
+  }
+},
+{
+  "model": "ingredients.ingredient",
+  "pk": 2194,
+  "fields": {
+    "name": "конняку",
+    "measurement_unit": "г"
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 8,
+  "pk": 27,
   "fields": {
-    "ingredient": 4,
-    "recipe": 11,
-    "amount": 60
+    "ingredient": 855,
+    "recipe": 20,
+    "amount": 50
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 9,
+  "pk": 28,
   "fields": {
-    "ingredient": 2,
-    "recipe": 12,
-    "amount": 99
+    "ingredient": 618,
+    "recipe": 20,
+    "amount": 500
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 10,
+  "pk": 29,
   "fields": {
-    "ingredient": 4,
-    "recipe": 12,
-    "amount": 60
+    "ingredient": 1546,
+    "recipe": 20,
+    "amount": 350
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 11,
+  "pk": 30,
   "fields": {
-    "ingredient": 2,
-    "recipe": 13,
-    "amount": 99
+    "ingredient": 1081,
+    "recipe": 21,
+    "amount": 300
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 12,
+  "pk": 31,
   "fields": {
-    "ingredient": 4,
-    "recipe": 13,
-    "amount": 60
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 13,
-  "fields": {
-    "ingredient": 2,
-    "recipe": 15,
-    "amount": 99
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 14,
-  "fields": {
-    "ingredient": 4,
-    "recipe": 15,
-    "amount": 60
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 15,
-  "fields": {
-    "ingredient": 2,
-    "recipe": 17,
-    "amount": 99
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 16,
-  "fields": {
-    "ingredient": 4,
-    "recipe": 17,
-    "amount": 60
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 17,
-  "fields": {
-    "ingredient": 2,
-    "recipe": 18,
-    "amount": 99
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 18,
-  "fields": {
-    "ingredient": 4,
-    "recipe": 18,
-    "amount": 60
-  }
-},
-{
-  "model": "recipes.recipeingredient",
-  "pk": 24,
-  "fields": {
-    "ingredient": 2,
-    "recipe": 19,
+    "ingredient": 2180,
+    "recipe": 21,
     "amount": 100
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 25,
+  "pk": 32,
   "fields": {
-    "ingredient": 45,
-    "recipe": 19,
-    "amount": 56
+    "ingredient": 1646,
+    "recipe": 21,
+    "amount": 50
   }
 },
 {
   "model": "recipes.recipeingredient",
-  "pk": 26,
+  "pk": 33,
   "fields": {
-    "ingredient": 62,
-    "recipe": 19,
-    "amount": 145
+    "ingredient": 252,
+    "recipe": 21,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 34,
+  "fields": {
+    "ingredient": 1546,
+    "recipe": 21,
+    "amount": 100
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 35,
+  "fields": {
+    "ingredient": 1684,
+    "recipe": 21,
+    "amount": 3
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 36,
+  "fields": {
+    "ingredient": 2137,
+    "recipe": 21,
+    "amount": 500
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 37,
+  "fields": {
+    "ingredient": 2021,
+    "recipe": 22,
+    "amount": 600
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 38,
+  "fields": {
+    "ingredient": 1646,
+    "recipe": 22,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 39,
+  "fields": {
+    "ingredient": 1419,
+    "recipe": 22,
+    "amount": 20
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 40,
+  "fields": {
+    "ingredient": 2055,
+    "recipe": 22,
+    "amount": 15
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 41,
+  "fields": {
+    "ingredient": 1686,
+    "recipe": 22,
+    "amount": 5
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 42,
+  "fields": {
+    "ingredient": 252,
+    "recipe": 22,
+    "amount": 130
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 43,
+  "fields": {
+    "ingredient": 1341,
+    "recipe": 23,
+    "amount": 150
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 44,
+  "fields": {
+    "ingredient": 1138,
+    "recipe": 23,
+    "amount": 250
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 45,
+  "fields": {
+    "ingredient": 1240,
+    "recipe": 23,
+    "amount": 120
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 46,
+  "fields": {
+    "ingredient": 880,
+    "recipe": 23,
+    "amount": 70
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 47,
+  "fields": {
+    "ingredient": 975,
+    "recipe": 23,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 48,
+  "fields": {
+    "ingredient": 1938,
+    "recipe": 23,
+    "amount": 120
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 49,
+  "fields": {
+    "ingredient": 1162,
+    "recipe": 23,
+    "amount": 40
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 50,
+  "fields": {
+    "ingredient": 725,
+    "recipe": 23,
+    "amount": 40
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 51,
+  "fields": {
+    "ingredient": 790,
+    "recipe": 24,
+    "amount": 650
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 52,
+  "fields": {
+    "ingredient": 1684,
+    "recipe": 24,
+    "amount": 5
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 53,
+  "fields": {
+    "ingredient": 1353,
+    "recipe": 24,
+    "amount": 5
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 54,
+  "fields": {
+    "ingredient": 2187,
+    "recipe": 24,
+    "amount": 150
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 55,
+  "fields": {
+    "ingredient": 1440,
+    "recipe": 25,
+    "amount": 800
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 56,
+  "fields": {
+    "ingredient": 2188,
+    "recipe": 25,
+    "amount": 130
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 57,
+  "fields": {
+    "ingredient": 2189,
+    "recipe": 25,
+    "amount": 60
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 58,
+  "fields": {
+    "ingredient": 781,
+    "recipe": 25,
+    "amount": 150
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 59,
+  "fields": {
+    "ingredient": 1053,
+    "recipe": 25,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 60,
+  "fields": {
+    "ingredient": 1867,
+    "recipe": 25,
+    "amount": 30
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 61,
+  "fields": {
+    "ingredient": 1674,
+    "recipe": 25,
+    "amount": 65
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 62,
+  "fields": {
+    "ingredient": 2190,
+    "recipe": 25,
+    "amount": 65
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 63,
+  "fields": {
+    "ingredient": 2192,
+    "recipe": 26,
+    "amount": 60
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 64,
+  "fields": {
+    "ingredient": 1670,
+    "recipe": 26,
+    "amount": 13
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 65,
+  "fields": {
+    "ingredient": 1032,
+    "recipe": 26,
+    "amount": 60
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 66,
+  "fields": {
+    "ingredient": 2193,
+    "recipe": 27,
+    "amount": 250
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 67,
+  "fields": {
+    "ingredient": 564,
+    "recipe": 27,
+    "amount": 45
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 68,
+  "fields": {
+    "ingredient": 1674,
+    "recipe": 27,
+    "amount": 35
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 69,
+  "fields": {
+    "ingredient": 1546,
+    "recipe": 27,
+    "amount": 15
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 70,
+  "fields": {
+    "ingredient": 1235,
+    "recipe": 27,
+    "amount": 10
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 71,
+  "fields": {
+    "ingredient": 2194,
+    "recipe": 28,
+    "amount": 200
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 72,
+  "fields": {
+    "ingredient": 769,
+    "recipe": 28,
+    "amount": 7
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 73,
+  "fields": {
+    "ingredient": 1546,
+    "recipe": 28,
+    "amount": 25
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 74,
+  "fields": {
+    "ingredient": 1674,
+    "recipe": 28,
+    "amount": 35
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 75,
+  "fields": {
+    "ingredient": 1520,
+    "recipe": 28,
+    "amount": 15
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 76,
+  "fields": {
+    "ingredient": 389,
+    "recipe": 29,
+    "amount": 250
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 77,
+  "fields": {
+    "ingredient": 1546,
+    "recipe": 29,
+    "amount": 30
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 78,
+  "fields": {
+    "ingredient": 1894,
+    "recipe": 29,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 79,
+  "fields": {
+    "ingredient": 252,
+    "recipe": 29,
+    "amount": 15
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 80,
+  "fields": {
+    "ingredient": 553,
+    "recipe": 29,
+    "amount": 3
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 81,
+  "fields": {
+    "ingredient": 2180,
+    "recipe": 30,
+    "amount": 50
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 82,
+  "fields": {
+    "ingredient": 520,
+    "recipe": 30,
+    "amount": 80
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 83,
+  "fields": {
+    "ingredient": 1053,
+    "recipe": 30,
+    "amount": 30
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 84,
+  "fields": {
+    "ingredient": 167,
+    "recipe": 30,
+    "amount": 400
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 85,
+  "fields": {
+    "ingredient": 1674,
+    "recipe": 30,
+    "amount": 7
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 86,
+  "fields": {
+    "ingredient": 1684,
+    "recipe": 30,
+    "amount": 3
+  }
+},
+{
+  "model": "recipes.recipeingredient",
+  "pk": 87,
+  "fields": {
+    "ingredient": 1282,
+    "recipe": 30,
+    "amount": 3
   }
 },
 {
   "model": "recipes.recipe",
-  "pk": 10,
+  "pk": 20,
   "fields": {
-    "name": "aaa",
-    "text": "bababa",
-    "image": "recipes/temp_W5CVouH.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:03:49.460Z",
-    "author": 2,
+    "name": "Клубничный джем",
+    "text": "Я готовлю клубничный джем примерно раз в год, но при этом допускаю ошибки, например, делаю его слишком жидким или слегка подрумяниваю.\r\n\r\nЯ хотела сделать рецепт, в котором вероятность неудачи была бы меньше, поэтому я добавила сахар после приготовления и проверила густоту, «взяв небольшое количество ложкой и протушив его», а затем выключила огонь, когда все стало так, как мне нравится. Я думаю, этот рецепт для тех, кто не хочет ошибаться.",
+    "image": "recipes/jamitigo0750.jpg",
+    "cooking_time": 60,
+    "date_created": "2025-03-28T19:08:20.454Z",
+    "author": 5,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 21,
+  "fields": {
+    "name": "Штрудель с яблоками",
+    "text": "Растереть венчиком яйца, сахар и соль.\r\nДобавить воду и перемешать до растворения соли и сахара.\r\nМуку просеять на доске или кухонном столе, сделать в муке лунку, положить в нее размягченное сливочное масло, добавить яичную смесь с водой и замесить крутое тесто.\r\nТесто обернуть пищевой пленкой и дать постоять 30-40 минут.\r\nРаскатать тесто в очень тонкий прямоугольный пласт, толщиной 1 мм.\r\nПласт теста положить на чистую салфетку или полотенце и смазать растопленным сливочным маслом.\r\nЯблоки вымыть, срезать кожицу, разрезать на 4 части и вырезать сердцевину.\r\nНарезать тонкими ломтиками.\r\nВ чашке или миске смешать сахар, молотые сухари и корицу.\r\nНа смазанное маслом тесто выложить слой нарезанных яблок (дольки яблок выкладывать не на всю поверхность лепешки, а только до середины пласта теста, чтобы оставалась часть теста не покрытого яблоками).\r\nСверху яблоки посыпать смесью молотых сухарей с сахаром и корицей.\r\nЗавернуть тесто в рулет с помощью салфетки или полотенца. Для этого нужно приподнять край теста вместе с полотенцем (на котором лежит тесто) и осторожно опустить поднятый край на тесто, сворачивая тесто в виде рулета.\r\nСмазать противень растительным маслом и положить рулет на противень швом вниз.\r\nПоверхность рулета смазать яйцом и сделать острием ножа в нескольких местах проколы.\r\nВыпекать штрудель около 25-30 минут при температуре 180?C.\r\nПриятного Вам аппетита!",
+    "image": "recipes/941069c4db4844ef1aadd0f2dab4da0c_l.jpg",
+    "cooking_time": 90,
+    "date_created": "2025-03-28T19:25:25.386Z",
+    "author": 8,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 22,
+  "fields": {
+    "name": "Цыпленок табака",
+    "text": "Подготовить ингредиенты.\r\nЦыпленка вымыть и хорошо обсушить бумажными полотенцами.\r\nПоложить цыпленка на разделочную доску, грудкой вверх, и разрезать грудку.\r\nРасплющить тушку цыпленка так, чтобы она стала плоской.\r\nНатереть цыпленка крупной солью.\r\nВ чугунную сковороду налить немного растительного масла (1 ст. л.), добавить сливочное и дать маслу хорошо нагреться (я бы рекомендовала жарить на топленом масле).\r\nВыложить цыпленка в горячее масло спинкой вверх.\r\nОбжарить около 5 минут на сильном огне, под крышкой, до легкого зарумянивания.\r\nЗатем перевернуть грудкой вверх и обжарить на сильном огне, под крышкой, около 5 минут.\r\nУменьшить огонь до минимального, цыпленка прикрыть перевернутой плоской тарелкой и придавить гнетом (например, кастрюля с водой).\r\nГотовить около 20-30 минут.\r\nЕсли мы доведем до готовности цыпленка таким нехитрым способом - он и будет называться цыпленок табака (тапака).\r\nНо можно сделать цыпленка еще вкуснее. Тогда добавим к нему чеснока и получим новое блюдо - чкмерули. Все просто! :))\r\nДля варианта с чесноком, через 20 минут жарки на медленном огне, полить цыпленка чесночным соусом ниорцкали (рецепт соуса см ниже), увеличить огонь до сильного, и жарить еще около 7-10 минут, чтобы выпарилась лишняя влага, и цыпленок полностью дошел до готовности.\r\nСоус ниорцкали.\r\nВ ступку положить очищенные, крупно нарезанные зубчики чеснока и добавить щепотку крупной соли.\r\nПеретереть чеснок с солью до образования однородной массы (если нет ступки, чеснок раздавить при помощи чесноковыжималки и смешать со щепоткой соли).\r\nПереложить чесночную кашицу в чашку или пиалу, добавить кипяченую холодную воду и перемешать. Соус готов!\r\nГотового цыпленка переложить на блюдо и сразу подать к столу.\r\nПриятного Вам аппетита!",
+    "image": "recipes/1975446572_0_237_2798_1811_1920x0_80_0_0_5cb3f8b1d94166e9e3a5e2eb3c25508a.jpg",
+    "cooking_time": 60,
+    "date_created": "2025-03-28T19:29:33.303Z",
+    "author": 14,
     "tags": [
       3
     ]
@@ -18451,134 +19536,14 @@
 },
 {
   "model": "recipes.recipe",
-  "pk": 11,
+  "pk": 23,
   "fields": {
-    "name": "aaab",
-    "text": "bababa",
-    "image": "recipes/temp_zJ8sKiZ.png",
+    "name": "Салат Греческий",
+    "text": "Гениальная проста! Именно такими словами можно  охарактеризовать Греческий салат, приготовленный по классическому рецепту. \r\nГотовится греческий салат невероятно быстро и просто, и ингредиенты для салата требуются самые обычные и доступные каждому.\r\nНо в чем же заключается секрет Греческого салата?! И я открою вам его секрет! Он заключен в сочных, спелых и ароматных сезонных овощах, которые используются для приготовления салата и в идеально подобранных ингредиентах и пропорциях. Овощи для греческого салата нарезаются довольно крупными кусочками.\r\nИ вы легко можете приготовить греческий салат в домашних условиях, благодаря пошаговым фото, тонкостям и секретам, которыми я с вами щедро делюсь на страницах нашего сайта. И поверьте, ваш греческий салат получится вкуснее, чем в ресторане!",
+    "image": "recipes/p_O.jpg",
     "cooking_time": 15,
-    "date_created": "2025-03-26T11:05:39.747Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 12,
-  "fields": {
-    "name": "aaabc",
-    "text": "bababa",
-    "image": "recipes/temp_BUtIbnu.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:07:45.241Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 13,
-  "fields": {
-    "name": "aaabcd",
-    "text": "bababa",
-    "image": "recipes/temp_R6amEEu.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:12:12.984Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 14,
-  "fields": {
-    "name": "aaabcde",
-    "text": "bababa",
-    "image": "recipes/temp_I5ClMN4.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:13:39.970Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 15,
-  "fields": {
-    "name": "aaabcdef",
-    "text": "bababa",
-    "image": "recipes/temp_UgAWiBq.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:15:03.535Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 16,
-  "fields": {
-    "name": "aaabcdefd",
-    "text": "bababa",
-    "image": "recipes/temp_BeGK9ru.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:18:31.779Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 17,
-  "fields": {
-    "name": "aaabcdefdy",
-    "text": "bababa",
-    "image": "recipes/temp_lEyYq55.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:19:44.701Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 18,
-  "fields": {
-    "name": "abc",
-    "text": "bababa",
-    "image": "recipes/temp_BARJDzb.png",
-    "cooking_time": 15,
-    "date_created": "2025-03-26T11:22:05.565Z",
-    "author": 2,
-    "tags": [
-      3
-    ]
-  }
-},
-{
-  "model": "recipes.recipe",
-  "pk": 19,
-  "fields": {
-    "name": "babaaf",
-    "text": "agagagva",
-    "image": "recipes/temp_qMjffSE.png",
-    "cooking_time": 17,
-    "date_created": "2025-03-26T11:25:51.406Z",
-    "author": 2,
+    "date_created": "2025-03-28T19:33:48.638Z",
+    "author": 13,
     "tags": [
       2,
       3,
@@ -18587,11 +19552,121 @@
   }
 },
 {
+  "model": "recipes.recipe",
+  "pk": 24,
+  "fields": {
+    "name": "Соте из курицы",
+    "text": "Курицу нужно только медленно обжарить, а в остальном этот рецепт прост в исполнении, не оставляет пятен на плите и не требует специальных весов. Мне показалось, что это очень просто и вкусно!",
+    "image": "recipes/chickensaute63182_800.jpg",
+    "cooking_time": 60,
+    "date_created": "2025-03-29T10:11:50.420Z",
+    "author": 12,
+    "tags": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 25,
+  "fields": {
+    "name": "Такикоми-гохан",
+    "text": "Для приготовления такикоми-гохан используются отваренные в воде побеги бамбука и королевские папоротники. В качестве ингредиента добавляется курица, и рецепт не требует бульона даси, что делает его простым в приготовлении.",
+    "image": "recipes/takenokozenmaig67132.jpg",
+    "cooking_time": 20,
+    "date_created": "2025-03-29T10:16:20.381Z",
+    "author": 7,
+    "tags": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 26,
+  "fields": {
+    "name": "Кинако амазаке",
+    "text": "Несмотря на то, что кинако амазаке не содержит сахара, он обладает восхитительной природной сладостью. Попробуйте смешать его с молоком или соевым молоком, чтобы его было легче пить.",
+    "image": "recipes/amazake6111.jpg",
+    "cooking_time": 5,
+    "date_created": "2025-03-29T10:19:39.396Z",
+    "author": 11,
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 27,
+  "fields": {
+    "name": "Жареный корень лотоса",
+    "text": "Разрежьте корень лотоса вдоль, очистите от кожицы и обжарьте во фритюре в сытном, приятном соусе. Они приправляются соусом на основе соевого соуса, а после обжаривания поливаются соусом!",
+    "image": "recipes/rkaraage57722.jpg",
+    "cooking_time": 20,
+    "date_created": "2025-03-29T10:23:54.884Z",
+    "author": 11,
+    "tags": [
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 28,
+  "fields": {
+    "name": "Конняку кинпира",
+    "text": "Этот рецепт можно приготовить без ножа, купив предварительно нарезанный конняку. Кинпира обладает насыщенным вкусом и является удобным резервным продуктом, который пролежит в холодильнике до недели. Попробуйте!",
+    "image": "recipes/konkin5421.jpg",
+    "cooking_time": 10,
+    "date_created": "2025-03-29T10:27:22.144Z",
+    "author": 6,
+    "tags": [
+      3
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 29,
+  "fields": {
+    "name": "Маринованный дайкон",
+    "text": "Простая приправа на основе соевого соуса и порошка карри. В результате получается таинственный неотразимый вкус, так что попробуйте!",
+    "image": "recipes/dkawa5254.jpg",
+    "cooking_time": 5,
+    "date_created": "2025-03-29T10:36:30.536Z",
+    "author": 5,
+    "tags": [
+      3
+    ]
+  }
+},
+{
+  "model": "recipes.recipe",
+  "pk": 30,
+  "fields": {
+    "name": "Тонко обжаренное яйцо и капустный суп",
+    "text": "Соедините в супе тонко сваренные яйца с капустой и морковью. Такое сочетание легко есть и полезно для пищеварения. Хорошо сочетается с любым меню, а также идеально подходит в качестве супа для завтрака, западных и хлебных блюд!",
+    "image": "recipes/usuyakisoup5143.jpg",
+    "cooking_time": 20,
+    "date_created": "2025-03-29T10:39:39.424Z",
+    "author": 6,
+    "tags": [
+      2,
+      3
+    ]
+  }
+},
+{
   "model": "avatar_user.avataruser",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$870000$6FqchIjoTzqwBjNPKg4EfE$zt8kZN1CjS06WNxIA/m6yXLtt454xqYs+2yZ5+oBpGI=",
-    "last_login": "2025-03-26T10:46:40.199Z",
+    "last_login": "2025-03-28T19:12:02.956Z",
     "is_superuser": true,
     "username": "kana",
     "first_name": "",
@@ -18607,99 +19682,264 @@
 },
 {
   "model": "avatar_user.avataruser",
-  "pk": 2,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$C9tGYTs2HZHXthzfTn894l$iiXFeDWIRINq0nM12VhQHZqAkslInBaHDXH5gBlAZVU=",
-    "last_login": "2025-03-26T14:20:11.944Z",
-    "is_superuser": false,
-    "username": "ccc",
-    "first_name": "aaa",
-    "last_name": "bbb",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-26T10:29:00.148Z",
-    "email": "ddd@ya.ru",
-    "avatar": "avatars/temp.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 3,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$C4ks8L01b3cUjEJugQFTPI$TZElG4hqsf3aGKW9Pog8Kc7eR/awHShF35FIBL9Olhc=",
-    "last_login": "2025-03-26T14:24:53.474Z",
-    "is_superuser": false,
-    "username": "cccc",
-    "first_name": "aaaa",
-    "last_name": "bbbb",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-26T14:24:45.962Z",
-    "email": "dddd@ya.ru",
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 4,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$YG9vSVvPfh0WZ1glWSNS7N$u75Ro5V2SMxTIC+oCyX9Y7by8ZrNmZ8fyal4SOyXzgQ=",
-    "last_login": "2025-03-27T11:48:05.846Z",
-    "is_superuser": false,
-    "username": "ccc2",
-    "first_name": "aaa2",
-    "last_name": "bbb2",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-27T11:47:58.426Z",
-    "email": "ddd2@ya.ru",
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "shopping_cart.shoppingcart",
-  "pk": 1,
-  "fields": {
-    "user": 3,
-    "recipe": 19
-  }
-},
-{
-  "model": "shopping_cart.shoppingcart",
-  "pk": 2,
-  "fields": {
-    "user": 3,
-    "recipe": 18
-  }
-},
-{
-  "model": "shopping_cart.shoppingcart",
   "pk": 5,
   "fields": {
-    "user": 3,
-    "recipe": 15
+    "password": "pbkdf2_sha256$870000$0EfdSYv1j0H7xaBGdmHqvP$Bt6gFuA5uExzjBRIoKQBc679qnXL8Abf4isEfcS+Zbk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LavDar",
+    "first_name": "Дарья",
+    "last_name": "Лаврова",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:34:40Z",
+    "email": "LavDar@ya.ru",
+    "avatar": "avatars/girl.png",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "favorite.favorite",
-  "pk": 2,
+  "model": "avatar_user.avataruser",
+  "pk": 6,
   "fields": {
-    "user": 3,
-    "recipe": 19
+    "password": "pbkdf2_sha256$870000$8FfcuJY3Vbiqxs0j4oGlcP$cTpv9DvYqf4gi+wQube9lPcDxSALtLitknPU6LMTOVM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "AgaDmi",
+    "first_name": "Дмитрий",
+    "last_name": "Агапов",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:35:41Z",
+    "email": "AgaDmi@ya.ru",
+    "avatar": "avatars/boy.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$XnihVSGhJuB2B69ahdjqHn$rJ6UwfMmh9AB14mBixWrAIi2NIRQq7815SKdpqwp8Pg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "AvdDam",
+    "first_name": "Дамир",
+    "last_name": "Авдеев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:03Z",
+    "email": "AvdDam@ya.ru",
+    "avatar": "avatars/boy_1.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$9hmq3zt4ZhhB0nodbxJsSC$kK59lgGbp4TK4IhEhOKbIuaK/RewjNn06dyiZwKpGqU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "MedEva",
+    "first_name": "Ева",
+    "last_name": "Медведева",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:22Z",
+    "email": "MedEva@ya.ru",
+    "avatar": "avatars/girl_1.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LvmnkkPeygwb4IeAH00Jig$550hQ4CNOJtL6jJ+vpJPEAKM3FGUmqHHuw+zHxV+qSM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LitAle",
+    "first_name": "Александра",
+    "last_name": "Литвинова",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:41Z",
+    "email": "LitAle@ya.ru",
+    "avatar": "avatars/girl_2.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$wphEtE7oeMGusvB0Up8x7s$P18x0JzDAXpzoBzCoaljhJKKloaSnAU9j98mdAbwNnk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "MorVad",
+    "first_name": "Вадим",
+    "last_name": "Морозов",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:37:29Z",
+    "email": "MorVad@ya.ru",
+    "avatar": "avatars/boy_2.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$vcZfodDHrK6jzpBZ4ns0qo$aRvs5eEpJ2sbnmHoY50FsD6WThp/1IRmsMxPjqvJwg8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SobAna",
+    "first_name": "Анастасия",
+    "last_name": "Соболева",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:37:51Z",
+    "email": "SobAna@ya.ru",
+    "avatar": "avatars/girl_3.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$pCuV9mNCBFcNwJLtuN0tG5$OWHGxpWSddjzPQb9kbaYL/tHJffU2+7moQ8nkByGUs0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LebEgo",
+    "first_name": "Егор",
+    "last_name": "Лебедев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:38:10Z",
+    "email": "LebEgo@ya.ru",
+    "avatar": "avatars/boy_3.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$tZ4ay4dKvqSyqaB9hL3IWn$a44/H2ONKlxzbFMRUP85q4C5wDH8EuRljJyU9Brq5bE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SorAle",
+    "first_name": "Александр",
+    "last_name": "Сорокин",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:38:26Z",
+    "email": "SorAle@ya.ru",
+    "avatar": "avatars/boy_4.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$8fIoiIOXkM2OkrC3jCeea5$wrhKQBvac0UjBnutzCUXChuVBo/JpNYBcWKtwhrb+NU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LazMak",
+    "first_name": "Максим",
+    "last_name": "Лазарев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:39:02Z",
+    "email": "LazMak@ya.ru",
+    "avatar": "avatars/boy_5.png",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
   "model": "subscriptions.subscription",
-  "pk": 2,
+  "pk": 3,
   "fields": {
-    "user_from": 4,
-    "user_to": 2
+    "user_from": 5,
+    "user_to": 6
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 4,
+  "fields": {
+    "user_from": 5,
+    "user_to": 7
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 5,
+  "fields": {
+    "user_from": 5,
+    "user_to": 8
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 6,
+  "fields": {
+    "user_from": 5,
+    "user_to": 9
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 7,
+  "fields": {
+    "user_from": 5,
+    "user_to": 10
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 8,
+  "fields": {
+    "user_from": 5,
+    "user_to": 11
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 9,
+  "fields": {
+    "user_from": 5,
+    "user_to": 12
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 10,
+  "fields": {
+    "user_from": 5,
+    "user_to": 13
+  }
+},
+{
+  "model": "subscriptions.subscription",
+  "pk": 11,
+  "fields": {
+    "user_from": 5,
+    "user_to": 14
   }
 }
 ]

@@ -41,7 +41,7 @@ class AvatarUserAdmin(UserAdmin):
     )
     list_filter = ('is_staff', 'is_active')
     fieldsets = (
-        (None, {'fields': ('username', 'email', 'password')}),
+        (None, {'fields': ('username', 'email', 'password', 'avatar')}),
         ('Персональная информация', {'fields': ('first_name', 'last_name')}),
         ('Права', {'fields': (
             'is_staff', 'is_active', 'is_superuser',

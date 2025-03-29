@@ -47,13 +47,10 @@ class ShoppingCartView(APIView):
         if not cart_entry.exists():
             return Response(
                 {"error": "Рецепт не обнаружен в списке покупок."},
-                status=status.HTTP_404_NOT_FOUND
+                status=status.HTTP_400_BAD_REQUEST
             )
         cart_entry.delete()
-        return Response(
-            {"message": "Рецепт успешно удален из списка покупок."},
-            status=status.HTTP_204_NO_CONTENT
-        )
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(('GET',))

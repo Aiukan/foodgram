@@ -2,7 +2,7 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from avatar_user.views import AvatarView
+from avatar_user.views import AvatarView, CustomUserViewSet
 from favorite.views import FavoriteView
 from ingredients.views import IngredientViewSet
 from recipes.views import RecipeViewSet, get_short_recipe_url
@@ -16,6 +16,11 @@ router.register('recipes', RecipeViewSet, basename='recipes')
 router.register('ingredients', IngredientViewSet, basename='ingredients')
 
 urlpatterns = [
+    path(
+        'users/me/',
+        CustomUserViewSet.as_view({'get': 'me', 'put': 'me', 'patch': 'me'}),
+        name='user-me'
+    ),
     path('users/me/avatar/', AvatarView.as_view(), name='avatar'),
     path(
         'recipes/<int:id>/shopping_cart/',
