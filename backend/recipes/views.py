@@ -93,6 +93,22 @@ class RecipeViewSet(viewsets.ModelViewSet):
     filterset_class = RecipeFilter
     pagination_class = RecipePagination
 
+    def get_queryset(self):
+        user = (
+            self.request.user
+            if self.request and self.request.user.is_authenticated
+            else None)
+        return (
+            Recipe.objects.select_related('author').annotate(
+                is_favorited=Exists(Favorite.objects.filter(
+                    user=user, recipe=OuterRef('id')
+                )),
+                is_in_shopping_cart=Exists(ShoppingCart.objects.filter(
+                    user=user, recipe=OuterRef('id')
+                ))
+            )
+        )
+
     def get_serializer_class(self):
         if self.action in ['list', 'retrieve']:
             return RecipeRetrieveSerializer

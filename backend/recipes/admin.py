@@ -10,6 +10,11 @@ class RecipeIngredientInline(admin.TabularInline):
     model = RecipeIngredient
     extra = 1
 
+    def get_queryset(self, request):
+        """Оптимизация для снижения количества запросов."""
+        qs = super().get_queryset(request)
+        return qs.select_related('ingredient', 'recipe')
+
 
 class RecipeAdmin(admin.ModelAdmin):
     """Модель админ-зоны Recipe."""
@@ -17,6 +22,7 @@ class RecipeAdmin(admin.ModelAdmin):
     list_display = (
         'name', 'get_author_username', 'date_created'
     )
+    list_select_related = ('author',)
     search_fields = ('name', 'author__username')
     list_filter = ('tags', 'date_created', 'cooking_time')
     inlines = (RecipeIngredientInline,)

@@ -7,7 +7,12 @@ class AvatarUser(AbstractUser):
     """Кастомная модель пользователя, поддерживающая изображения."""
 
     email = models.EmailField(unique=True)
-    avatar = models.ImageField(upload_to='avatars/', null=True, default=None)
+    avatar = models.ImageField(
+        upload_to='avatars/',
+        null=True,
+        blank=True,
+        default=None
+    )
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
@@ -20,4 +25,4 @@ class AvatarUser(AbstractUser):
 
     def __str__(self):
         """Строковое представление пользователя."""
-        return self.email
+        return self.username

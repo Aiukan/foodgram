@@ -3,9 +3,7 @@ from rest_framework import serializers
 
 from api.serializers import Base64ImageField
 from avatar_user.serializers import AvatarUserSerializer
-from favorite.models import Favorite
 from ingredients.models import Ingredient
-from shopping_cart.models import ShoppingCart
 from tags.models import Tag
 from tags.serializers import TagSerializer
 
@@ -18,7 +16,7 @@ class RecipeIngredientCreateSerializer(serializers.ModelSerializer):
     id = serializers.PrimaryKeyRelatedField(
         queryset=Ingredient.objects.all(),
         source='ingredient.id',
-        required=True
+        required=True,
     )
     amount = serializers.IntegerField(required=True, min_value=1)
 
@@ -32,12 +30,9 @@ class RecipeIngredientCreateSerializer(serializers.ModelSerializer):
 class RecipeIngredientRetrieveSerializer(serializers.ModelSerializer):
     """Сериализатор получения RecipeIngredient."""
 
-    id = serializers.PrimaryKeyRelatedField(
-        queryset=Ingredient.objects.all(),
-        source='ingredient.id'
-    )
-    name = serializers.ReadOnlyField(source='ingredient.name')
-    measurement_unit = serializers.ReadOnlyField(
+    id = serializers.IntegerField(source='ingredient.id')
+    name = serializers.CharField(source='ingredient.name')
+    measurement_unit = serializers.CharField(
         source='ingredient.measurement_unit'
     )
     amount = serializers.IntegerField()
@@ -143,8 +138,8 @@ class RecipeRetrieveSerializer(serializers.ModelSerializer):
     author = AvatarUserSerializer(read_only=True)
     tags = TagSerializer(many=True)
     image = Base64ImageField()
-    is_in_shopping_cart = serializers.SerializerMethodField()
-    is_favorited = serializers.SerializerMethodField()
+    is_in_shopping_cart = serializers.BooleanField()
+    is_favorited = serializers.BooleanField()
 
     class Meta:
         model = Recipe
@@ -152,26 +147,6 @@ class RecipeRetrieveSerializer(serializers.ModelSerializer):
             'id', 'name', 'text', 'image', 'ingredients', 'tags',
             'cooking_time', 'author', 'is_in_shopping_cart', 'is_favorited'
         )
-
-    def get_is_in_shopping_cart(self, obj):
-        """Получение информации о наличии в списке покупок."""
-        request = self.context.get('request')
-        if request and request.user and request.user.is_authenticated:
-            return ShoppingCart.objects.filter(
-                recipe=obj,
-                user=request.user
-            ).exists()
-        return False
-
-    def get_is_favorited(self, obj):
-        """Получение информации о наличии в избранном."""
-        request = self.context.get('request')
-        if request and request.user and request.user.is_authenticated:
-            return Favorite.objects.filter(
-                recipe=obj,
-                user=request.user
-            ).exists()
-        return False
 
 
 class ShortCardRecipeSerializer(serializers.ModelSerializer):

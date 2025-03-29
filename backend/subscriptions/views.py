@@ -51,7 +51,7 @@ class SubscriptionView(APIView):
         )
         if not subscription_entry.exists():
             return Response(
-                {"error": "Подписка на данного пользователя не найдена."},
+                {'error': 'Подписка на данного пользователя не найдена.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
         subscription_entry.delete()

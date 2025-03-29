@@ -18,7 +18,7 @@ router.register('ingredients', IngredientViewSet, basename='ingredients')
 urlpatterns = [
     path(
         'users/me/',
-        CustomUserViewSet.as_view({'get': 'me', 'put': 'me', 'patch': 'me'}),
+        CustomUserViewSet.as_view({'get': 'me'}),
         name='user-me'
     ),
     path('users/me/avatar/', AvatarView.as_view(), name='avatar'),
@@ -40,7 +40,7 @@ urlpatterns = [
     path(
         'users/subscriptions/',
         SubscriptionListView.as_view(),
-        name='subscribe'
+        name='subscribtions'
     ),
     path(
         'users/<int:id>/subscribe/',

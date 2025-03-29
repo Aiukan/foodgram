@@ -16,6 +16,11 @@ class SubscriptionInline(admin.TabularInline):
     fk_name = 'user_from'
     extra = 1
 
+    def get_queryset(self, request):
+        """Оптимизация для снижения количества запросов."""
+        qs = super().get_queryset(request)
+        return qs.select_related('user_from', 'user_to')
+
 
 class FavoriteInline(admin.TabularInline):
     """Вложенная модель админ-зоны Favorite."""
@@ -23,12 +28,22 @@ class FavoriteInline(admin.TabularInline):
     model = Favorite
     extra = 1
 
+    def get_queryset(self, request):
+        """Оптимизация для снижения количества запросов."""
+        qs = super().get_queryset(request)
+        return qs.select_related('user', 'recipe')
+
 
 class ShoppingCartInline(admin.TabularInline):
     """Вложенная модель админ-зоны ShoppingCart."""
 
     model = ShoppingCart
     extra = 1
+
+    def get_queryset(self, request):
+        """Оптимизация для снижения количества запросов."""
+        qs = super().get_queryset(request)
+        return qs.select_related('user', 'recipe')
 
 
 class AvatarUserAdmin(UserAdmin):
