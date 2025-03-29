@@ -106,7 +106,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 is_in_shopping_cart=Exists(ShoppingCart.objects.filter(
                     user=user, recipe=OuterRef('id')
                 ))
-            )
+            ).prefetch_related('ingredients__ingredient', 'tags')
         )
 
     def get_serializer_class(self):
