@@ -36,5 +36,5 @@ services:
       - frontend
       - backend
     volumes:
-      - static:/staticfiles
+      - static:/usr/share/nginx/html
       - media:/media
