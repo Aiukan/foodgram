@@ -1,5 +1,3 @@
-version: '3'
-
 volumes:
   pg_data:
   static:
@@ -7,26 +5,30 @@ volumes:
 
 services:
   db:
+    container_name: foodgram-db
     image: postgres:13.10
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    image: aiukan/kittygram_backend
+    container_name: foodgram-back
+    image: aiukan/foodgram_backend
     env_file: .env
     depends_on:
       - db
     volumes:
-      - static:/backend_static
+      - static:/app/collected_static/
       - media:/app/media
   frontend:
+    container_name: foodgram-front
     env_file: .env
-    image: aiukan/kittygram_frontend
+    image: aiukan/foodgram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/frontend_static
-  gateway:
-    image: aiukan/kittygram_gateway
+      - static:/app/result_build/build
+  nginx:
+    container_name: foodgram-proxy
+    image: aiukan/foodgram_gateway
     env_file: .env
     ports:
       - 9000:80
@@ -34,5 +36,6 @@ services:
       - frontend
       - backend
     volumes:
-      - static:/staticfiles
+      - static:/usr/share/nginx/html/
+      - ./docs/:/usr/share/nginx/html/api/docs/
       - media:/media

@@ -27,7 +27,6 @@
 * django-filter==25.1
 * djangorestframework==3.15.2
 * djoser==2.3.1
-* flake8==7.1.2
 * pillow==11.1.0
 * psycopg2==2.9.10
 * pybase62==1.0.0
