@@ -1,4 +1,4 @@
-python backend/manage.py makemigrations
+docker compose -f docker-compose.yml exec backend python manage.py makemigrations
 docker compose -f docker-compose.yml pull
 docker compose build --pull
 docker compose -f docker-compose.yml down
