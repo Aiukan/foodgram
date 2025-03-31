@@ -146,7 +146,7 @@ AUTHENTICATION_BACKENDS = [
     "djoser.auth_backends.LoginFieldBackend",
 ]
 
-CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://aiukan2.ddns.net/').split(',')
 
 
 DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))
