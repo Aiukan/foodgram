@@ -146,6 +146,9 @@ AUTHENTICATION_BACKENDS = [
     "djoser.auth_backends.LoginFieldBackend",
 ]
 
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
+
+
 DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))
 
 MAX_FIRST_NAME_LENGTH = int(os.getenv('MAX_FIRST_NAME_LENGTH', '150'))
