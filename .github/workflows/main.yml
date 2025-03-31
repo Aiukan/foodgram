@@ -126,8 +126,16 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd foodgram
-          ./data/after-compose.bat
-          ./data/load-fixture.bat
+          sudo docker compose -f docker-compose.production.yml pull
+          sudo docker compose build --pull
+          sudo docker compose -f docker-compose.production.yml down
+          sudo docker compose -f docker-compose.production.yml up -d
+          sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic --no-input
+          sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
+          sudo docker compose -f docker-compose.production.yml exec backend sh -c "python manage.py createsuperuser --no-input 2>/dev/null || true"
+          sudo docker compose -f docker-compose.production.yml cp data backend:/app/data
+          sudo docker compose -f docker-compose.production.yml exec backend python manage.py loaddata data/full_data.json
+          sudo docker compose -f docker-compose.production.yml cp data/media backend:/app/
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
