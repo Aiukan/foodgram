@@ -2,6 +2,7 @@
 import base62
 import django_filters
 from avatar_user.permissions import IsAuthorOrReadOnly
+from django.conf import settings
 from django.db.models import Exists, OuterRef
 from django.http import (HttpResponseNotFound, HttpResponseRedirect,
                          JsonResponse)
@@ -123,6 +124,10 @@ def get_short_recipe_url(request, id):
     """Представление для получения короткой ссылки на рецепт."""
     encoded_id = base62.encode(id)
     short_url = request.build_absolute_uri(f'/s/{encoded_id}')
+
+    if settings.SECURE_PROXY_SSL_HEADER:
+        short_url = short_url.replace("http://", "https://")
+
     return JsonResponse({'short-link': short_url})
 
 
