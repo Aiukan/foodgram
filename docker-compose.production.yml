@@ -25,7 +25,7 @@ services:
     image: aiukan/foodgram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/app/result_build/build
+      - static:/frontend_static
   nginx:
     container_name: foodgram-proxy
     image: aiukan/foodgram_gateway
@@ -36,6 +36,5 @@ services:
       - frontend
       - backend
     volumes:
-      - static:/usr/share/nginx/html/
-      - ./docs/:/usr/share/nginx/html/api/docs/
+      - static:/staticfiles
       - media:/media

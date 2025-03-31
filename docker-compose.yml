@@ -36,5 +36,4 @@ services:
       - backend
     volumes:
       - static:/usr/share/nginx/html/
-      - ./docs/:/usr/share/nginx/html/api/docs/
       - media:/media
