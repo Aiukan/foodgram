@@ -21,9 +21,7 @@ class AvatarView(views.APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
         serializer = AvatarSerializer(
-            instance=request.user,
-            data=request.data,
-            partial=True
+            instance=request.user, data=request.data, partial=True
         )
         if serializer.is_valid():
             if request.user.avatar:
@@ -45,11 +43,4 @@ class AvatarView(views.APIView):
 class CustomUserViewSet(UserViewSet):
     """Вьюсет для ограничения users/me/ для анонимных пользователей."""
 
-    def me(self, request):
-        """Проверка авторизации перед выполнением users/me/."""
-        if not request.user or request.user.is_anonymous:
-            return Response(
-                {"detail": 'Страница ограничена для анонимных пользователей.'},
-                status=status.HTTP_401_UNAUTHORIZED
-            )
-        return super().me(request)
+    permission_classes = (IsAuthenticated,)

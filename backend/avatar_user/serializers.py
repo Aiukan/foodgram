@@ -53,9 +53,8 @@ class AvatarUserSerializer(UserCreateSerializer):
 
         model = User
         fields = (
-            'id', 'email', 'username',
-            'first_name', 'last_name', 'password', 'avatar',
-            'is_subscribed'
+            'id', 'email', 'username', 'first_name', 'last_name',
+            'password', 'avatar', 'is_subscribed'
         )
 
     def get_is_subscribed(self, obj):

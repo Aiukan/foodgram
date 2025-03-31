@@ -40,4 +40,5 @@ class Subscription(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Пользователь {self.user_from} подписан на {self.user_to}.'
+        """Представление подписки."""
+        return f'{self.user_from} подписан на {self.user_to}.'

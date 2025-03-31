@@ -22,16 +22,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_filters',
-    'rest_framework.authtoken',
-    'rest_framework',
     'djoser',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'avatar_user.apps.AvatarUserConfig',
     'api.apps.ApiConfig',
-    'tags.apps.TagsConfig',
+    'favorite.apps.FavoriteConfig',
     'ingredients.apps.IngredientsConfig',
     'recipes.apps.RecipesConfig',
-    'avatar_user.apps.AvatarUserConfig',
+    'tags.apps.TagsConfig',
     'shopping_cart.apps.ShoppingCartConfig',
-    'favorite.apps.FavoriteConfig',
     'subscriptions.apps.SubscriptionsConfig',
 ]
 
@@ -121,7 +121,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': int(os.getenv('DEFAULT_PAGE_SIZE', '10')),
 }
 
 FORBIDDEN_USERNAMES = ('me',)
@@ -151,3 +151,9 @@ DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))
 MAX_FIRST_NAME_LENGTH = int(os.getenv('MAX_FIRST_NAME_LENGTH', '150'))
 
 MAX_LAST_NAME_LENGTH = int(os.getenv('MAX_LAST_NAME_LENGTH', '150'))
+
+INGREDIENT_NAME_MAX_LENGTH = int(os.getenv('INGREDIENT_NAME_MAX_LENGTH', '128'))
+
+MEASUREMENT_UNIT_MAX_LENGTH = int(os.getenv('MEASUREMENT_UNIT_MAX_LENGTH', '64'))
+
+RECIPE_NAME_MAX_LENGTH = int(os.getenv('RECIPE_NAME_MAX_LENGTH', '256'))

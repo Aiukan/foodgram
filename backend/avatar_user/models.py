@@ -8,10 +8,7 @@ class AvatarUser(AbstractUser):
 
     email = models.EmailField(unique=True)
     avatar = models.ImageField(
-        upload_to='avatars/',
-        null=True,
-        blank=True,
-        default=None
+        upload_to='avatars/', null=True, blank=True, default=None
     )
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

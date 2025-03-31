@@ -27,4 +27,4 @@ class Tag(models.Model):
 
     def __str__(self):
         """Строковое представление тега."""
-        return f'Тег: {self.name}'
+        return f'{self.name}'

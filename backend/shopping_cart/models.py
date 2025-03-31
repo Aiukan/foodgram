@@ -30,4 +30,4 @@ class ShoppingCart(models.Model):
 
     def __str__(self):
         """Строковое представление записи списка покупок."""
-        return f'Запись: {self.user} - {self.recipe}.'
+        return f'{self.recipe} в списке покупок у {self.user}.'

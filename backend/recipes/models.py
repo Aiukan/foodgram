@@ -1,6 +1,5 @@
 """Модели recipws."""
-import os
-
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core import validators
 from django.db import models
@@ -46,7 +45,7 @@ class Recipe(models.Model):
     """Модель рецепта."""
 
     name = models.CharField(
-        max_length=int(os.getenv('RECIPE_NAME_MAX_LENGTH', '256')),
+        max_length=settings.RECIPE_NAME_MAX_LENGTH,
         unique=True,
         verbose_name='Название'
     )

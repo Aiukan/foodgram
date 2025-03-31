@@ -11,7 +11,7 @@ from .models import Favorite
 
 
 class FavoriteView(APIView):
-    """Вьюсет модели Favorite."""
+    """Представления модели Favorite."""
 
     permission_classes = (permissions.IsAuthenticated,)
 
@@ -26,8 +26,7 @@ class FavoriteView(APIView):
             )
         Favorite.objects.create(user=user, recipe=recipe)
         serializer = ShortCardRecipeSerializer(
-            recipe,
-            context={'request': request}
+            recipe, context={'request': request}
         )
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 

@@ -8,7 +8,7 @@ User = get_user_model()
 
 
 class Favorite(models.Model):
-    """Модель списка избранного."""
+    """Модель добавления в избранное."""
 
     user = models.ForeignKey(
         User,
@@ -30,4 +30,4 @@ class Favorite(models.Model):
 
     def __str__(self):
         """Строковое представление избранного."""
-        return f'Избранное: {self.user} - {self.recipe}.'
+        return f'{self.recipe} в избранном у {self.user}.'

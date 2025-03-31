@@ -1,6 +1,5 @@
 """Модели ingredients."""
-import os
-
+from django.conf import settings
 from django.db import models
 
 
@@ -8,12 +7,12 @@ class Ingredient(models.Model):
     """Модель ингредиента."""
 
     name = models.CharField(
-        max_length=int(os.getenv('INGREDIENT_NAME_MAX_LENGTH', '128')),
+        max_length=settings.INGREDIENT_NAME_MAX_LENGTH,
         unique=True,
         verbose_name='Название'
     )
     measurement_unit = models.CharField(
-        max_length=int(os.getenv('MEASUREMENT_UNIT_MAX_LENGTH', '64')),
+        max_length=settings.MEASUREMENT_UNIT_MAX_LENGTH,
         verbose_name='Единицы измерения'
     )
 

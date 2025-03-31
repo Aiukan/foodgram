@@ -30,10 +30,12 @@ class RecipeAdmin(admin.ModelAdmin):
 
     @admin.display(description='Автор')
     def get_author_username(self, obj):
+        """Получение имени пользователя автора."""
         return obj.author.username
 
     @admin.display(description='Добавлено в избранное')
     def favorite_count(self, obj):
+        """Количество добавлений рецепта в избранное."""
         return obj.farovite_users.count()
 
 

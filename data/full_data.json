@@ -689,663 +689,11 @@
   }
 },
 {
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can view log entry",
-    "content_type": 1,
-    "codename": "view_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can view permission",
-    "content_type": 2,
-    "codename": "view_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can view group",
-    "content_type": 3,
-    "codename": "view_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 4,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 4,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 4,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can view content type",
-    "content_type": 4,
-    "codename": "view_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 5,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 5,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 5,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can view session",
-    "content_type": 5,
-    "codename": "view_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can add Token",
-    "content_type": 6,
-    "codename": "add_token"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can change Token",
-    "content_type": 6,
-    "codename": "change_token"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can delete Token",
-    "content_type": 6,
-    "codename": "delete_token"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can view Token",
-    "content_type": 6,
-    "codename": "view_token"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add Token",
-    "content_type": 7,
-    "codename": "add_tokenproxy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change Token",
-    "content_type": 7,
-    "codename": "change_tokenproxy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete Token",
-    "content_type": 7,
-    "codename": "delete_tokenproxy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can view Token",
-    "content_type": 7,
-    "codename": "view_tokenproxy"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can add Тег",
-    "content_type": 8,
-    "codename": "add_tag"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can change Тег",
-    "content_type": 8,
-    "codename": "change_tag"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can delete Тег",
-    "content_type": 8,
-    "codename": "delete_tag"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can view Тег",
-    "content_type": 8,
-    "codename": "view_tag"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can add Ингредиент",
-    "content_type": 9,
-    "codename": "add_ingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can change Ингредиент",
-    "content_type": 9,
-    "codename": "change_ingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can delete Ингредиент",
-    "content_type": 9,
-    "codename": "delete_ingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can view Ингредиент",
-    "content_type": 9,
-    "codename": "view_ingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 37,
-  "fields": {
-    "name": "Can add Рецепт",
-    "content_type": 10,
-    "codename": "add_recipe"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 38,
-  "fields": {
-    "name": "Can change Рецепт",
-    "content_type": 10,
-    "codename": "change_recipe"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 39,
-  "fields": {
-    "name": "Can delete Рецепт",
-    "content_type": 10,
-    "codename": "delete_recipe"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 40,
-  "fields": {
-    "name": "Can view Рецепт",
-    "content_type": 10,
-    "codename": "view_recipe"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 41,
-  "fields": {
-    "name": "Can add Ингредиент в рецепте",
-    "content_type": 11,
-    "codename": "add_recipeingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 42,
-  "fields": {
-    "name": "Can change Ингредиент в рецепте",
-    "content_type": 11,
-    "codename": "change_recipeingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 43,
-  "fields": {
-    "name": "Can delete Ингредиент в рецепте",
-    "content_type": 11,
-    "codename": "delete_recipeingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 44,
-  "fields": {
-    "name": "Can view Ингредиент в рецепте",
-    "content_type": 11,
-    "codename": "view_recipeingredient"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 45,
-  "fields": {
-    "name": "Can add Пользователь",
-    "content_type": 12,
-    "codename": "add_avataruser"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 46,
-  "fields": {
-    "name": "Can change Пользователь",
-    "content_type": 12,
-    "codename": "change_avataruser"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 47,
-  "fields": {
-    "name": "Can delete Пользователь",
-    "content_type": 12,
-    "codename": "delete_avataruser"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 48,
-  "fields": {
-    "name": "Can view Пользователь",
-    "content_type": 12,
-    "codename": "view_avataruser"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 49,
-  "fields": {
-    "name": "Can add Запись списка покупок",
-    "content_type": 13,
-    "codename": "add_shoppingcart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 50,
-  "fields": {
-    "name": "Can change Запись списка покупок",
-    "content_type": 13,
-    "codename": "change_shoppingcart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 51,
-  "fields": {
-    "name": "Can delete Запись списка покупок",
-    "content_type": 13,
-    "codename": "delete_shoppingcart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 52,
-  "fields": {
-    "name": "Can view Запись списка покупок",
-    "content_type": 13,
-    "codename": "view_shoppingcart"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 53,
-  "fields": {
-    "name": "Can add Избранное",
-    "content_type": 14,
-    "codename": "add_favorite"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 54,
-  "fields": {
-    "name": "Can change Избранное",
-    "content_type": 14,
-    "codename": "change_favorite"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 55,
-  "fields": {
-    "name": "Can delete Избранное",
-    "content_type": 14,
-    "codename": "delete_favorite"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 56,
-  "fields": {
-    "name": "Can view Избранное",
-    "content_type": 14,
-    "codename": "view_favorite"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 57,
-  "fields": {
-    "name": "Can add Подписка",
-    "content_type": 15,
-    "codename": "add_subscription"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 58,
-  "fields": {
-    "name": "Can change Подписка",
-    "content_type": 15,
-    "codename": "change_subscription"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 59,
-  "fields": {
-    "name": "Can delete Подписка",
-    "content_type": 15,
-    "codename": "delete_subscription"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 60,
-  "fields": {
-    "name": "Can view Подписка",
-    "content_type": 15,
-    "codename": "view_subscription"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "authtoken",
-    "model": "token"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "authtoken",
-    "model": "tokenproxy"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "tags",
-    "model": "tag"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "ingredients",
-    "model": "ingredient"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "recipes",
-    "model": "recipe"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "recipes",
-    "model": "recipeingredient"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "avatar_user",
-    "model": "avataruser"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 13,
-  "fields": {
-    "app_label": "shopping_cart",
-    "model": "shoppingcart"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 14,
-  "fields": {
-    "app_label": "favorite",
-    "model": "favorite"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 15,
-  "fields": {
-    "app_label": "subscriptions",
-    "model": "subscription"
+  "model": "sessions.session",
+  "pk": "50jo692bq4stmqzdeymm8608lgc4hnmx",
+  "fields": {
+    "session_data": ".eJxVyzEOwjAMheG7ZEZViIOTMDIwcYfI2C4JoFZq6YS4OwF1gPX733uaTMuj5GXWKVcxe7Pdmc0vnolvOnyKXMcG3TetOnen8VKHY9W7HNbh37vQXNoVBa1w7LkHB0EteVHlQMrRE6Wo3iI4mxgJOJFDi00DgTiXIJJ5vQGDyzd6:1tzCXL:TXhg18naqxmQjCWGstuiRj7YL9Z4sD759aQScnhrDdE",
+    "expire_date": "2025-04-14T10:38:35.558Z"
   }
 },
 {
@@ -1365,35 +713,231 @@
   }
 },
 {
-  "model": "tags.tag",
+  "model": "avatar_user.avataruser",
   "pk": 1,
   "fields": {
-    "name": "десерт",
-    "slug": "dessert"
+    "password": "pbkdf2_sha256$870000$6FqchIjoTzqwBjNPKg4EfE$zt8kZN1CjS06WNxIA/m6yXLtt454xqYs+2yZ5+oBpGI=",
+    "last_login": "2025-03-28T19:12:02.956Z",
+    "is_superuser": true,
+    "username": "kana",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-26T10:27:48.355Z",
+    "email": "kana@ya.ru",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "tags.tag",
-  "pk": 2,
+  "model": "avatar_user.avataruser",
+  "pk": 5,
   "fields": {
-    "name": "завтрак",
-    "slug": "breakfast"
+    "password": "pbkdf2_sha256$870000$0EfdSYv1j0H7xaBGdmHqvP$Bt6gFuA5uExzjBRIoKQBc679qnXL8Abf4isEfcS+Zbk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LavDar",
+    "first_name": "Дарья",
+    "last_name": "Лаврова",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:34:40Z",
+    "email": "LavDar@ya.ru",
+    "avatar": "avatars/girl.png",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "tags.tag",
-  "pk": 3,
+  "model": "avatar_user.avataruser",
+  "pk": 6,
   "fields": {
-    "name": "обед",
-    "slug": "lunch"
+    "password": "pbkdf2_sha256$870000$8FfcuJY3Vbiqxs0j4oGlcP$cTpv9DvYqf4gi+wQube9lPcDxSALtLitknPU6LMTOVM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "AgaDmi",
+    "first_name": "Дмитрий",
+    "last_name": "Агапов",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:35:41Z",
+    "email": "AgaDmi@ya.ru",
+    "avatar": "avatars/boy.png",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "tags.tag",
-  "pk": 4,
+  "model": "avatar_user.avataruser",
+  "pk": 7,
   "fields": {
-    "name": "ужин",
-    "slug": "dinner"
+    "password": "pbkdf2_sha256$870000$XnihVSGhJuB2B69ahdjqHn$rJ6UwfMmh9AB14mBixWrAIi2NIRQq7815SKdpqwp8Pg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "AvdDam",
+    "first_name": "Дамир",
+    "last_name": "Авдеев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:03Z",
+    "email": "AvdDam@ya.ru",
+    "avatar": "avatars/boy_1.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$9hmq3zt4ZhhB0nodbxJsSC$kK59lgGbp4TK4IhEhOKbIuaK/RewjNn06dyiZwKpGqU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "MedEva",
+    "first_name": "Ева",
+    "last_name": "Медведева",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:22Z",
+    "email": "MedEva@ya.ru",
+    "avatar": "avatars/girl_1.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LvmnkkPeygwb4IeAH00Jig$550hQ4CNOJtL6jJ+vpJPEAKM3FGUmqHHuw+zHxV+qSM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LitAle",
+    "first_name": "Александра",
+    "last_name": "Литвинова",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:36:41Z",
+    "email": "LitAle@ya.ru",
+    "avatar": "avatars/girl_2.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$wphEtE7oeMGusvB0Up8x7s$P18x0JzDAXpzoBzCoaljhJKKloaSnAU9j98mdAbwNnk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "MorVad",
+    "first_name": "Вадим",
+    "last_name": "Морозов",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:37:29Z",
+    "email": "MorVad@ya.ru",
+    "avatar": "avatars/boy_2.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$vcZfodDHrK6jzpBZ4ns0qo$aRvs5eEpJ2sbnmHoY50FsD6WThp/1IRmsMxPjqvJwg8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SobAna",
+    "first_name": "Анастасия",
+    "last_name": "Соболева",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:37:51Z",
+    "email": "SobAna@ya.ru",
+    "avatar": "avatars/girl_3.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$pCuV9mNCBFcNwJLtuN0tG5$OWHGxpWSddjzPQb9kbaYL/tHJffU2+7moQ8nkByGUs0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LebEgo",
+    "first_name": "Егор",
+    "last_name": "Лебедев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:38:10Z",
+    "email": "LebEgo@ya.ru",
+    "avatar": "avatars/boy_3.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$tZ4ay4dKvqSyqaB9hL3IWn$a44/H2ONKlxzbFMRUP85q4C5wDH8EuRljJyU9Brq5bE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SorAle",
+    "first_name": "Александр",
+    "last_name": "Сорокин",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:38:26Z",
+    "email": "SorAle@ya.ru",
+    "avatar": "avatars/boy_4.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$8fIoiIOXkM2OkrC3jCeea5$wrhKQBvac0UjBnutzCUXChuVBo/JpNYBcWKtwhrb+NU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "LazMak",
+    "first_name": "Максим",
+    "last_name": "Лазарев",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-28T18:39:02Z",
+    "email": "LazMak@ya.ru",
+    "avatar": "avatars/boy_5.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "avatar_user.avataruser",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$QQ6OgqandoBEJJEw0eDUt7$JV8FVIqp7OSXnQ+QXAWxJxGoZ4YK4H7iU5VfAj/U38M=",
+    "last_login": "2025-03-31T10:38:35.551Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-31T10:24:09.756Z",
+    "email": "admin@ya.ru",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
@@ -19662,212 +19206,35 @@
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "tags.tag",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$870000$6FqchIjoTzqwBjNPKg4EfE$zt8kZN1CjS06WNxIA/m6yXLtt454xqYs+2yZ5+oBpGI=",
-    "last_login": "2025-03-28T19:12:02.956Z",
-    "is_superuser": true,
-    "username": "kana",
-    "first_name": "",
-    "last_name": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2025-03-26T10:27:48.355Z",
-    "email": "kana@ya.ru",
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
+    "name": "десерт",
+    "slug": "dessert"
   }
 },
 {
-  "model": "avatar_user.avataruser",
-  "pk": 5,
+  "model": "tags.tag",
+  "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$870000$0EfdSYv1j0H7xaBGdmHqvP$Bt6gFuA5uExzjBRIoKQBc679qnXL8Abf4isEfcS+Zbk=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "LavDar",
-    "first_name": "Дарья",
-    "last_name": "Лаврова",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:34:40Z",
-    "email": "LavDar@ya.ru",
-    "avatar": "avatars/girl.png",
-    "groups": [],
-    "user_permissions": []
+    "name": "завтрак",
+    "slug": "breakfast"
   }
 },
 {
-  "model": "avatar_user.avataruser",
-  "pk": 6,
+  "model": "tags.tag",
+  "pk": 3,
   "fields": {
-    "password": "pbkdf2_sha256$870000$8FfcuJY3Vbiqxs0j4oGlcP$cTpv9DvYqf4gi+wQube9lPcDxSALtLitknPU6LMTOVM=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "AgaDmi",
-    "first_name": "Дмитрий",
-    "last_name": "Агапов",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:35:41Z",
-    "email": "AgaDmi@ya.ru",
-    "avatar": "avatars/boy.png",
-    "groups": [],
-    "user_permissions": []
+    "name": "обед",
+    "slug": "lunch"
   }
 },
 {
-  "model": "avatar_user.avataruser",
-  "pk": 7,
+  "model": "tags.tag",
+  "pk": 4,
   "fields": {
-    "password": "pbkdf2_sha256$870000$XnihVSGhJuB2B69ahdjqHn$rJ6UwfMmh9AB14mBixWrAIi2NIRQq7815SKdpqwp8Pg=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "AvdDam",
-    "first_name": "Дамир",
-    "last_name": "Авдеев",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:36:03Z",
-    "email": "AvdDam@ya.ru",
-    "avatar": "avatars/boy_1.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 8,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$9hmq3zt4ZhhB0nodbxJsSC$kK59lgGbp4TK4IhEhOKbIuaK/RewjNn06dyiZwKpGqU=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "MedEva",
-    "first_name": "Ева",
-    "last_name": "Медведева",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:36:22Z",
-    "email": "MedEva@ya.ru",
-    "avatar": "avatars/girl_1.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 9,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$LvmnkkPeygwb4IeAH00Jig$550hQ4CNOJtL6jJ+vpJPEAKM3FGUmqHHuw+zHxV+qSM=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "LitAle",
-    "first_name": "Александра",
-    "last_name": "Литвинова",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:36:41Z",
-    "email": "LitAle@ya.ru",
-    "avatar": "avatars/girl_2.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 10,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$wphEtE7oeMGusvB0Up8x7s$P18x0JzDAXpzoBzCoaljhJKKloaSnAU9j98mdAbwNnk=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "MorVad",
-    "first_name": "Вадим",
-    "last_name": "Морозов",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:37:29Z",
-    "email": "MorVad@ya.ru",
-    "avatar": "avatars/boy_2.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 11,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$vcZfodDHrK6jzpBZ4ns0qo$aRvs5eEpJ2sbnmHoY50FsD6WThp/1IRmsMxPjqvJwg8=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "SobAna",
-    "first_name": "Анастасия",
-    "last_name": "Соболева",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:37:51Z",
-    "email": "SobAna@ya.ru",
-    "avatar": "avatars/girl_3.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 12,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$pCuV9mNCBFcNwJLtuN0tG5$OWHGxpWSddjzPQb9kbaYL/tHJffU2+7moQ8nkByGUs0=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "LebEgo",
-    "first_name": "Егор",
-    "last_name": "Лебедев",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:38:10Z",
-    "email": "LebEgo@ya.ru",
-    "avatar": "avatars/boy_3.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 13,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$tZ4ay4dKvqSyqaB9hL3IWn$a44/H2ONKlxzbFMRUP85q4C5wDH8EuRljJyU9Brq5bE=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "SorAle",
-    "first_name": "Александр",
-    "last_name": "Сорокин",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:38:26Z",
-    "email": "SorAle@ya.ru",
-    "avatar": "avatars/boy_4.png",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "avatar_user.avataruser",
-  "pk": 14,
-  "fields": {
-    "password": "pbkdf2_sha256$870000$8fIoiIOXkM2OkrC3jCeea5$wrhKQBvac0UjBnutzCUXChuVBo/JpNYBcWKtwhrb+NU=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "LazMak",
-    "first_name": "Максим",
-    "last_name": "Лазарев",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2025-03-28T18:39:02Z",
-    "email": "LazMak@ya.ru",
-    "avatar": "avatars/boy_5.png",
-    "groups": [],
-    "user_permissions": []
+    "name": "ужин",
+    "slug": "dinner"
   }
 },
 {

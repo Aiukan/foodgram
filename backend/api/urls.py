@@ -35,17 +35,12 @@ urlpatterns = [
     path(
         'users/<int:id>/subscribe/',
         SubscriptionView.as_view(),
-        name='subscribtion-list'
+        name='subscribe'
     ),
     path(
         'users/subscriptions/',
         SubscriptionListView.as_view(),
-        name='subscribtions'
-    ),
-    path(
-        'users/<int:id>/subscribe/',
-        get_short_recipe_url,
-        name='get-short-recipe-url'
+        name='subscription-list'
     ),
     path(
         'recipes/download_shopping_cart/',

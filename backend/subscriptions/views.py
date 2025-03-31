@@ -15,7 +15,7 @@ User = get_user_model()
 
 
 class SubscriptionView(APIView):
-    """Вьюсет модели Subscription."""
+    """Представления модели Subscription."""
 
     permission_classes = (permissions.IsAuthenticated,)
 

@@ -17,7 +17,7 @@ INGREDIENT_FORMAT = '* {} — {}'
 
 
 class ShoppingCartView(APIView):
-    """Вьюсет модели ShoppingCart."""
+    """Представления модели ShoppingCart."""
 
     permission_classes = (permissions.IsAuthenticated,)
 

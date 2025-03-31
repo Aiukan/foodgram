@@ -28,7 +28,7 @@ class SubscriptionsSerializer(AvatarUserSerializer):
         )
 
     def get_recipes(self, obj):
-        """Получение нескольких рецептов пользователя."""
+        """Получение нескольких последних рецептов пользователя."""
         request = self.context.get('request')
         recipes_limit = request.query_params.get(
             "recipes_limit", settings.DEFAULT_RECIPES_LIMIT

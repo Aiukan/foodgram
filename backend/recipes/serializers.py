@@ -56,6 +56,8 @@ class RecipeCreateUpdateSerializer(serializers.ModelSerializer):
     image = Base64ImageField(required=True)
 
     class Meta:
+        """Мета-информация сериализатора для обновления рецептов."""
+
         model = Recipe
         fields = (
             'name', 'text', 'image',
@@ -96,8 +98,7 @@ class RecipeCreateUpdateSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """Переопределение метода create.
 
-        Добавление пользователя данной сессии к данным и
-        раздельная обработка ингредиентов.
+        Добавление пользователя сессии к данным и обработка ингредиентов.
         """
         ingredients_data = validated_data.pop('ingredients')
         request = self.context.get('request')
@@ -108,10 +109,7 @@ class RecipeCreateUpdateSerializer(serializers.ModelSerializer):
         return recipe
 
     def update(self, instance, validated_data):
-        """Переопределение метода update.
-
-        Раздельная обработка ингредиентов.
-        """
+        """Переопределение метода update. Раздельная обработка ингредиентов."""
         ingredients_data = validated_data.pop('ingredients', [])
         instance = super().update(instance, validated_data)
         instance.ingredients.all().delete()
@@ -142,6 +140,8 @@ class RecipeRetrieveSerializer(serializers.ModelSerializer):
     is_favorited = serializers.BooleanField()
 
     class Meta:
+        """Мета-информация сериализатора с полной информацией о рецепте."""
+
         model = Recipe
         fields = (
             'id', 'name', 'text', 'image', 'ingredients', 'tags',

@@ -16,16 +16,18 @@ from shopping_cart.models import ShoppingCart
 from tags.models import Tag
 
 from .models import Recipe
-from .serializers import RecipeRetrieveSerializer, RecipeCreateUpdateSerializer
+from .serializers import RecipeCreateUpdateSerializer, RecipeRetrieveSerializer
 
 
 class RecipePagination(PageNumberPagination):
     """Класс пагинации для рецепта."""
+
     page_size = 6
     page_size_query_param = 'limit'
     max_page_size = 20
 
     def get_paginated_response(self, data):
+        """Пагинация по страницам с параметром limit."""
         return Response({
             'count': self.page.paginator.count,
             'next': self.get_next_link(),
@@ -94,6 +96,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
     pagination_class = RecipePagination
 
     def get_queryset(self):
+        """Оптимизация получения кверисета."""
         user = (
             self.request.user
             if self.request and self.request.user.is_authenticated
@@ -110,6 +113,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         )
 
     def get_serializer_class(self):
+        """Разделение сериализаторов на получение и обновление данных."""
         if self.action in ['list', 'retrieve']:
             return RecipeRetrieveSerializer
         return RecipeCreateUpdateSerializer
