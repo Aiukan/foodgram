@@ -3,7 +3,6 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core import validators
 from django.db import models
-
 from ingredients.models import Ingredient
 from tags.models import Tag
 

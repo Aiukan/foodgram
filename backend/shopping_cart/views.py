@@ -3,13 +3,12 @@ from collections import defaultdict
 
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
+from recipes.models import Recipe
+from recipes.serializers import ShortCardRecipeSerializer
 from rest_framework import permissions, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-from recipes.models import Recipe
-from recipes.serializers import ShortCardRecipeSerializer
 
 from .models import ShoppingCart
 

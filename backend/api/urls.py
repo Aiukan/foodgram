@@ -1,11 +1,10 @@
 """URL эндпоинты API проекта foodgram_backend."""
-from django.urls import include, path
-from rest_framework import routers
-
 from avatar_user.views import AvatarView, CustomUserViewSet
+from django.urls import include, path
 from favorite.views import FavoriteView
 from ingredients.views import IngredientViewSet
 from recipes.views import RecipeViewSet, get_short_recipe_url
+from rest_framework import routers
 from shopping_cart.views import ShoppingCartView, download_shopping_cart
 from subscriptions.views import SubscriptionListView, SubscriptionView
 from tags.views import TagViewSet

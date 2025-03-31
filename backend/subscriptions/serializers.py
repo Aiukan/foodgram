@@ -1,12 +1,11 @@
 """Сериализаторы subscriptions."""
+from avatar_user.serializers import AvatarUserSerializer
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer
-from rest_framework import serializers
-
-from avatar_user.serializers import AvatarUserSerializer
 from recipes.models import Recipe
 from recipes.serializers import ShortCardRecipeSerializer
+from rest_framework import serializers
 
 User = get_user_model()
 
