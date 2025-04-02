@@ -7,7 +7,7 @@ from django.db.models import Exists, OuterRef
 from django.http import (HttpResponseNotFound, HttpResponseRedirect,
                          JsonResponse)
 from favorite.models import Favorite
-from rest_framework import viewsets
+from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
@@ -100,7 +100,8 @@ class RecipeViewSet(viewsets.ModelViewSet):
         user = (
             self.request.user
             if self.request and self.request.user.is_authenticated
-            else None)
+            else None
+        )
         return (
             Recipe.objects.select_related('author').annotate(
                 is_favorited=Exists(Favorite.objects.filter(
@@ -114,9 +115,46 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         """Разделение сериализаторов на получение и обновление данных."""
-        if self.action in ['list', 'retrieve']:
-            return RecipeRetrieveSerializer
-        return RecipeCreateUpdateSerializer
+        return (
+            RecipeRetrieveSerializer if self.action in ['list', 'retrieve']
+            else RecipeCreateUpdateSerializer
+        )
+
+    def _save_and_serialize(self, serializer, request, status_code):
+        """Вспомогательная функция для вызова retrieve-сериализатора."""
+        recipe = serializer.save()
+        user = request.user if request.user.is_authenticated else None
+        recipe.is_favorited = Favorite.objects.filter(
+            user=user, recipe=recipe
+        ).exists()
+        recipe.is_in_shopping_cart = ShoppingCart.objects.filter(
+            user=user, recipe=recipe
+        ).exists()
+        return Response(
+            RecipeRetrieveSerializer(
+                recipe, context=self.get_serializer_context()
+            ).data,
+            status=status_code
+        )
+
+    def create(self, request, *args, **kwargs):
+        """Создание рецепта с возвращением полных данных."""
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return self._save_and_serialize(
+            serializer, request, status.HTTP_201_CREATED
+        )
+
+    def update(self, request, *args, **kwargs):
+        """Обновление рецепта с возвращением полных данных."""
+        partial = kwargs.pop("partial", False)
+        serializer = self.get_serializer(
+            self.get_object(), data=request.data, partial=partial
+        )
+        serializer.is_valid(raise_exception=True)
+        return self._save_and_serialize(
+            serializer, request, status.HTTP_200_OK
+        )
 
 
 @api_view(('GET',))
