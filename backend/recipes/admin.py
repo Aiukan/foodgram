@@ -1,7 +1,7 @@
 """Админ-зона приложения recipes."""
 from django.contrib import admin
 
-from .models import Recipe, RecipeIngredient
+from recipes.models import Recipe, RecipeIngredient
 
 
 class RecipeIngredientInline(admin.TabularInline):

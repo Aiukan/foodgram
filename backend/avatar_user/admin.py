@@ -1,11 +1,11 @@
 """Админ-зона приложения avatar_user."""
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
+
+from avatar_user.models import AvatarUser
 from favorite.models import Favorite
 from shopping_cart.models import ShoppingCart
 from subscriptions.models import Subscription
-
-from .models import AvatarUser
 
 
 class SubscriptionInline(admin.TabularInline):

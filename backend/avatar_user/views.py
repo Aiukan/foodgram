@@ -5,7 +5,7 @@ from rest_framework import status, views
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from .serializers import AvatarSerializer
+from avatar_user.serializers import AvatarSerializer
 
 
 class AvatarView(views.APIView):

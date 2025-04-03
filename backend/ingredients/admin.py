@@ -1,7 +1,7 @@
 """Админ-зона приложения ingredients."""
 from django.contrib import admin
 
-from .models import Ingredient
+from ingredients.models import Ingredient
 
 
 class IngredientAdmin(admin.ModelAdmin):

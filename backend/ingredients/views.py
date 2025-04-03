@@ -3,8 +3,8 @@ from django_filters.rest_framework import (CharFilter, DjangoFilterBackend,
                                            FilterSet)
 from rest_framework import viewsets
 
-from .models import Ingredient
-from .serializers import IngredientSerializer
+from ingredients.models import Ingredient
+from ingredients.serializers import IngredientSerializer
 
 
 class IngredientFilter(FilterSet):

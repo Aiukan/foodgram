@@ -1,22 +1,23 @@
 """Представления recipes."""
 import base62
 import django_filters
-from avatar_user.permissions import IsAuthorOrReadOnly
 from django.conf import settings
 from django.db.models import Exists, OuterRef
 from django.http import (HttpResponseNotFound, HttpResponseRedirect,
                          JsonResponse)
-from favorite.models import Favorite
 from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
+
+from avatar_user.permissions import IsAuthorOrReadOnly
+from favorite.models import Favorite
+from recipes.models import Recipe
+from recipes.serializers import (RecipeCreateUpdateSerializer,
+                                 RecipeRetrieveSerializer)
 from shopping_cart.models import ShoppingCart
 from tags.models import Tag
-
-from .models import Recipe
-from .serializers import RecipeCreateUpdateSerializer, RecipeRetrieveSerializer
 
 
 class RecipePagination(PageNumberPagination):

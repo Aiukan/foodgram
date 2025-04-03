@@ -1,10 +1,12 @@
 """URL эндпоинты API проекта foodgram_backend."""
-from avatar_user.views import AvatarView, CustomUserViewSet
 from django.urls import include, path
+from djoser.views import UserViewSet
+from rest_framework import routers
+
+from avatar_user.views import AvatarView, CustomUserViewSet
 from favorite.views import FavoriteView
 from ingredients.views import IngredientViewSet
 from recipes.views import RecipeViewSet, get_short_recipe_url
-from rest_framework import routers
 from shopping_cart.views import ShoppingCartView, download_shopping_cart
 from subscriptions.views import SubscriptionListView, SubscriptionView
 from tags.views import TagViewSet
@@ -13,6 +15,7 @@ router = routers.DefaultRouter()
 router.register('tags', TagViewSet, basename='tags')
 router.register('recipes', RecipeViewSet, basename='recipes')
 router.register('ingredients', IngredientViewSet, basename='ingredients')
+router.register('users', UserViewSet, basename='users')
 
 urlpatterns = [
     path(
@@ -52,6 +55,5 @@ urlpatterns = [
         name='get-short-recipe-url'
     ),
     path('', include(router.urls)),
-    path('', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
 ]

@@ -1,12 +1,12 @@
 """Сериализаторы recipes."""
+from rest_framework import serializers
+
 from api.serializers import Base64ImageField
 from avatar_user.serializers import AvatarUserSerializer
 from ingredients.models import Ingredient
-from rest_framework import serializers
+from recipes.models import Recipe, RecipeIngredient
 from tags.models import Tag
 from tags.serializers import TagSerializer
-
-from .models import Recipe, RecipeIngredient
 
 
 class RecipeIngredientCreateSerializer(serializers.ModelSerializer):

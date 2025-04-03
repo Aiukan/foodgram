@@ -1,7 +1,7 @@
 """URL конфигурация recipes."""
 from django.urls import path
 
-from .views import short_recipe_url
+from recipes.views import short_recipe_url
 
 app_name = 'recipes'
 

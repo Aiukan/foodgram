@@ -8,8 +8,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Subscription
-from .serializers import SubscriptionsSerializer
+from subscriptions.models import Subscription
+from subscriptions.serializers import SubscriptionsSerializer
 
 User = get_user_model()
 

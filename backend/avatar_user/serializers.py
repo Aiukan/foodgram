@@ -1,9 +1,10 @@
 """Сериализаторы avatar_user."""
-from api.serializers import Base64ImageField
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer
 from rest_framework import serializers
+
+from api.serializers import Base64ImageField
 from subscriptions.models import Subscription
 
 User = get_user_model()
