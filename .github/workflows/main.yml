@@ -27,8 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install setuptools==39.1.0
-        pip install flake8==5.0.0 flake8-isort==5.0.0
         pip install -r ./backend/requirements.txt 
     - name: Test with flake8 and django tests
       env:

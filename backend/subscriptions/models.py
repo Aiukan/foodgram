@@ -1,7 +1,7 @@
 """Модели subscriptions."""
 from django.contrib.auth import get_user_model
-from django.core.exceptions import ValidationError
 from django.db import models
+from django.db.models import Q
 
 User = get_user_model()
 
@@ -25,19 +25,16 @@ class Subscription(models.Model):
 
         verbose_name = 'Подписка'
         verbose_name_plural = 'Подписки'
-        unique_together = ('user_from', 'user_to')
-
-    def clean(self):
-        """Запрещает подписку на самого себя."""
-        if self.user_from == self.user_to:
-            raise ValidationError(
-                "Пользователь не может подписаться на самого себя!"
-            )
-
-    def save(self, *args, **kwargs):
-        """Вызов clean перед сохранением."""
-        self.clean()
-        super().save(*args, **kwargs)
+        constraints = (
+            models.UniqueConstraint(
+                fields=('user_from', 'user_to'),
+                name='unique_subscription'
+            ),
+            models.CheckConstraint(
+                check=~Q(user_from=models.F('user_to')),
+                name='prevent_self_subscription'
+            ),
+        )
 
     def __str__(self):
         """Представление подписки."""

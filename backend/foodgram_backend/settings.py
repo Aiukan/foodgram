@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', django.core.management.utils.get_random_sec
 
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1').split(',')
 
 
 INSTALLED_APPS = [
@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework',
     'rest_framework.authtoken',
-    'avatar_user.apps.AvatarUserConfig',
+    'users.apps.UsersConfig',
     'api.apps.ApiConfig',
     'favorite.apps.FavoriteConfig',
     'ingredients.apps.IngredientsConfig',
@@ -65,17 +65,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'foodgram_backend.wsgi.application'
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB', 'django'),
-        'USER': os.getenv('POSTGRES_USER', 'django'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
-        'HOST': os.getenv('DB_HOST', ''),
-        'PORT': os.getenv('DB_PORT', 5432)
+if os.getenv('DJANGO_USE_SQLITE', 'False') == 'True':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('POSTGRES_DB', 'django'),
+            'USER': os.getenv('POSTGRES_USER', 'django'),
+            'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
+            'HOST': os.getenv('DB_HOST', ''),
+            'PORT': os.getenv('DB_PORT', 5432)
+        }
+    }
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -126,14 +133,13 @@ REST_FRAMEWORK = {
 
 FORBIDDEN_USERNAMES = ('me',)
 
-AUTH_USER_MODEL = 'avatar_user.AvatarUser'
+AUTH_USER_MODEL = 'users.User'
 
 DJOSER = {
     'LOGIN_FIELD': 'email',
     'SERIALIZERS': {
-        'user_create': 'avatar_user.serializers.AvatarUserCreationSerializer',
-        'user': 'avatar_user.serializers.AvatarUserSerializer',
-        'current_user': 'avatar_user.serializers.AvatarUserSerializer',
+        'user': 'api.serializers.UserSerializer',
+        'current_user': 'api.serializers.UserSerializer',
     },
     'PERMISSIONS': {
         'user_list': ['rest_framework.permissions.AllowAny'],
@@ -151,15 +157,3 @@ CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', 'https://aiukan2.ddns.n
 USE_X_FORWARDED_HOST = True
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-DEFAULT_RECIPES_LIMIT = int(os.getenv('DEFAULT_RECIPES_LIMIT', '3'))
-
-MAX_FIRST_NAME_LENGTH = int(os.getenv('MAX_FIRST_NAME_LENGTH', '150'))
-
-MAX_LAST_NAME_LENGTH = int(os.getenv('MAX_LAST_NAME_LENGTH', '150'))
-
-INGREDIENT_NAME_MAX_LENGTH = int(os.getenv('INGREDIENT_NAME_MAX_LENGTH', '128'))
-
-MEASUREMENT_UNIT_MAX_LENGTH = int(os.getenv('MEASUREMENT_UNIT_MAX_LENGTH', '64'))
-
-RECIPE_NAME_MAX_LENGTH = int(os.getenv('RECIPE_NAME_MAX_LENGTH', '256'))

@@ -1,1 +1,1 @@
-"""Проект backend/foodgram."""
+"""Проект foodgram_backend."""

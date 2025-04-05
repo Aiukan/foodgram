@@ -7,6 +7,7 @@ from recipes.models import Recipe, RecipeIngredient
 class RecipeIngredientInline(admin.TabularInline):
     """Вложенная модель админ-зоны RecipeIngredient."""
 
+    min_num = 1
     model = RecipeIngredient
     extra = 1
 
@@ -36,7 +37,7 @@ class RecipeAdmin(admin.ModelAdmin):
     @admin.display(description='Добавлено в избранное')
     def favorite_count(self, obj):
         """Количество добавлений рецепта в избранное."""
-        return obj.farovite_users.count()
+        return obj.favorited_by.count()
 
 
 admin.site.register(Recipe, RecipeAdmin)

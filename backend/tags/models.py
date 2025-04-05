@@ -1,19 +1,20 @@
 """Модели tags."""
-import os
-
 from django.db import models
+
+from foodgram_backend.constants import (TAGS_NAME_MAX_LENGTH,
+                                        TAGS_SLUG_MAX_LENGTH)
 
 
 class Tag(models.Model):
     """Модель тега."""
 
     name = models.CharField(
-        max_length=int(os.getenv('TAGS_NAME_MAX_LENGTH', '64')),
+        max_length=TAGS_NAME_MAX_LENGTH,
         unique=True,
         verbose_name='Название'
     )
     slug = models.SlugField(
-        max_length=int(os.getenv('TAGS_SLUG_MAX_LENGTH', '64')),
+        max_length=TAGS_SLUG_MAX_LENGTH,
         unique=True,
         verbose_name='Слаг'
     )
@@ -27,4 +28,4 @@ class Tag(models.Model):
 
     def __str__(self):
         """Строковое представление тега."""
-        return f'{self.name}'
+        return f'Тег {self.name}'

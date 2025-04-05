@@ -689,6 +689,162 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-04-05T10:51:42.703Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "30",
+    "object_repr": "Рецепт Тонко обжаренное яйцо и капустный суп",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-04-05T10:51:47.357Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "29",
+    "object_repr": "Рецепт Маринованный дайкон",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-04-05T10:51:51.493Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "28",
+    "object_repr": "Рецепт Конняку кинпира",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-04-05T10:51:55.532Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "27",
+    "object_repr": "Рецепт Жареный корень лотоса",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-04-05T10:51:59.878Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "26",
+    "object_repr": "Рецепт Кинако амазаке",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-04-05T10:52:05.293Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "25",
+    "object_repr": "Рецепт Такикоми-гохан",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-04-05T10:52:14.647Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "24",
+    "object_repr": "Рецепт Соте из курицы",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-04-05T10:52:53.053Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "24",
+    "object_repr": "Рецепт Соте из курицы",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-04-05T10:52:58.911Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "23",
+    "object_repr": "Рецепт Салат Греческий",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-04-05T10:53:04.926Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "22",
+    "object_repr": "Рецепт Цыпленок табака",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-04-05T10:53:10.087Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "21",
+    "object_repr": "Рецепт Штрудель с яблоками",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-04-05T10:53:14.186Z",
+    "user": 15,
+    "content_type": 11,
+    "object_id": "20",
+    "object_repr": "Рецепт Клубничный джем",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "50jo692bq4stmqzdeymm8608lgc4hnmx",
   "fields": {
@@ -713,228 +869,228 @@
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$870000$6FqchIjoTzqwBjNPKg4EfE$zt8kZN1CjS06WNxIA/m6yXLtt454xqYs+2yZ5+oBpGI=",
     "last_login": "2025-03-28T19:12:02.956Z",
     "is_superuser": true,
-    "username": "kana",
-    "first_name": "",
-    "last_name": "",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2025-03-26T10:27:48.355Z",
     "email": "kana@ya.ru",
+    "username": "kana",
+    "first_name": "",
+    "last_name": "",
     "avatar": "",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 5,
   "fields": {
     "password": "pbkdf2_sha256$870000$0EfdSYv1j0H7xaBGdmHqvP$Bt6gFuA5uExzjBRIoKQBc679qnXL8Abf4isEfcS+Zbk=",
     "last_login": null,
     "is_superuser": false,
-    "username": "LavDar",
-    "first_name": "Дарья",
-    "last_name": "Лаврова",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:34:40Z",
     "email": "LavDar@ya.ru",
+    "username": "LavDar",
+    "first_name": "Дарья",
+    "last_name": "Лаврова",
     "avatar": "avatars/girl.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 6,
   "fields": {
     "password": "pbkdf2_sha256$870000$8FfcuJY3Vbiqxs0j4oGlcP$cTpv9DvYqf4gi+wQube9lPcDxSALtLitknPU6LMTOVM=",
     "last_login": null,
     "is_superuser": false,
-    "username": "AgaDmi",
-    "first_name": "Дмитрий",
-    "last_name": "Агапов",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:35:41Z",
     "email": "AgaDmi@ya.ru",
+    "username": "AgaDmi",
+    "first_name": "Дмитрий",
+    "last_name": "Агапов",
     "avatar": "avatars/boy.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 7,
   "fields": {
     "password": "pbkdf2_sha256$870000$XnihVSGhJuB2B69ahdjqHn$rJ6UwfMmh9AB14mBixWrAIi2NIRQq7815SKdpqwp8Pg=",
     "last_login": null,
     "is_superuser": false,
-    "username": "AvdDam",
-    "first_name": "Дамир",
-    "last_name": "Авдеев",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:36:03Z",
     "email": "AvdDam@ya.ru",
+    "username": "AvdDam",
+    "first_name": "Дамир",
+    "last_name": "Авдеев",
     "avatar": "avatars/boy_1.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 8,
   "fields": {
     "password": "pbkdf2_sha256$870000$9hmq3zt4ZhhB0nodbxJsSC$kK59lgGbp4TK4IhEhOKbIuaK/RewjNn06dyiZwKpGqU=",
     "last_login": null,
     "is_superuser": false,
-    "username": "MedEva",
-    "first_name": "Ева",
-    "last_name": "Медведева",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:36:22Z",
     "email": "MedEva@ya.ru",
+    "username": "MedEva",
+    "first_name": "Ева",
+    "last_name": "Медведева",
     "avatar": "avatars/girl_1.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 9,
   "fields": {
     "password": "pbkdf2_sha256$870000$LvmnkkPeygwb4IeAH00Jig$550hQ4CNOJtL6jJ+vpJPEAKM3FGUmqHHuw+zHxV+qSM=",
     "last_login": null,
     "is_superuser": false,
-    "username": "LitAle",
-    "first_name": "Александра",
-    "last_name": "Литвинова",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:36:41Z",
     "email": "LitAle@ya.ru",
+    "username": "LitAle",
+    "first_name": "Александра",
+    "last_name": "Литвинова",
     "avatar": "avatars/girl_2.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 10,
   "fields": {
     "password": "pbkdf2_sha256$870000$wphEtE7oeMGusvB0Up8x7s$P18x0JzDAXpzoBzCoaljhJKKloaSnAU9j98mdAbwNnk=",
     "last_login": null,
     "is_superuser": false,
-    "username": "MorVad",
-    "first_name": "Вадим",
-    "last_name": "Морозов",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:37:29Z",
     "email": "MorVad@ya.ru",
+    "username": "MorVad",
+    "first_name": "Вадим",
+    "last_name": "Морозов",
     "avatar": "avatars/boy_2.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 11,
   "fields": {
     "password": "pbkdf2_sha256$870000$vcZfodDHrK6jzpBZ4ns0qo$aRvs5eEpJ2sbnmHoY50FsD6WThp/1IRmsMxPjqvJwg8=",
     "last_login": null,
     "is_superuser": false,
-    "username": "SobAna",
-    "first_name": "Анастасия",
-    "last_name": "Соболева",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:37:51Z",
     "email": "SobAna@ya.ru",
+    "username": "SobAna",
+    "first_name": "Анастасия",
+    "last_name": "Соболева",
     "avatar": "avatars/girl_3.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 12,
   "fields": {
     "password": "pbkdf2_sha256$870000$pCuV9mNCBFcNwJLtuN0tG5$OWHGxpWSddjzPQb9kbaYL/tHJffU2+7moQ8nkByGUs0=",
     "last_login": null,
     "is_superuser": false,
-    "username": "LebEgo",
-    "first_name": "Егор",
-    "last_name": "Лебедев",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:38:10Z",
     "email": "LebEgo@ya.ru",
+    "username": "LebEgo",
+    "first_name": "Егор",
+    "last_name": "Лебедев",
     "avatar": "avatars/boy_3.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 13,
   "fields": {
     "password": "pbkdf2_sha256$870000$tZ4ay4dKvqSyqaB9hL3IWn$a44/H2ONKlxzbFMRUP85q4C5wDH8EuRljJyU9Brq5bE=",
     "last_login": null,
     "is_superuser": false,
-    "username": "SorAle",
-    "first_name": "Александр",
-    "last_name": "Сорокин",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:38:26Z",
     "email": "SorAle@ya.ru",
+    "username": "SorAle",
+    "first_name": "Александр",
+    "last_name": "Сорокин",
     "avatar": "avatars/boy_4.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 14,
   "fields": {
     "password": "pbkdf2_sha256$870000$8fIoiIOXkM2OkrC3jCeea5$wrhKQBvac0UjBnutzCUXChuVBo/JpNYBcWKtwhrb+NU=",
     "last_login": null,
     "is_superuser": false,
-    "username": "LazMak",
-    "first_name": "Максим",
-    "last_name": "Лазарев",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2025-03-28T18:39:02Z",
     "email": "LazMak@ya.ru",
+    "username": "LazMak",
+    "first_name": "Максим",
+    "last_name": "Лазарев",
     "avatar": "avatars/boy_5.png",
     "groups": [],
     "user_permissions": []
   }
 },
 {
-  "model": "avatar_user.avataruser",
+  "model": "users.user",
   "pk": 15,
   "fields": {
     "password": "pbkdf2_sha256$870000$QQ6OgqandoBEJJEw0eDUt7$JV8FVIqp7OSXnQ+QXAWxJxGoZ4YK4H7iU5VfAj/U38M=",
     "last_login": "2025-03-31T10:38:35.551Z",
     "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2025-03-31T10:24:09.756Z",
     "email": "admin@ya.ru",
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
     "avatar": "",
     "groups": [],
     "user_permissions": []
@@ -19043,6 +19199,7 @@
     "cooking_time": 60,
     "date_created": "2025-03-28T19:08:20.454Z",
     "author": 5,
+    "short_code": "5fpmHIwQ",
     "tags": [
       1
     ]
@@ -19058,6 +19215,7 @@
     "cooking_time": 90,
     "date_created": "2025-03-28T19:25:25.386Z",
     "author": 8,
+    "short_code": "EFiQ4C7t",
     "tags": [
       1
     ]
@@ -19073,6 +19231,7 @@
     "cooking_time": 60,
     "date_created": "2025-03-28T19:29:33.303Z",
     "author": 14,
+    "short_code": "MSgmfmgw",
     "tags": [
       3
     ]
@@ -19088,6 +19247,7 @@
     "cooking_time": 15,
     "date_created": "2025-03-28T19:33:48.638Z",
     "author": 13,
+    "short_code": "e6U6Ipu7",
     "tags": [
       2,
       3,
@@ -19105,6 +19265,7 @@
     "cooking_time": 60,
     "date_created": "2025-03-29T10:11:50.420Z",
     "author": 12,
+    "short_code": "puDpd9bM",
     "tags": [
       3,
       4
@@ -19121,6 +19282,7 @@
     "cooking_time": 20,
     "date_created": "2025-03-29T10:16:20.381Z",
     "author": 7,
+    "short_code": "pvNfTsBF",
     "tags": [
       2,
       3
@@ -19137,6 +19299,7 @@
     "cooking_time": 5,
     "date_created": "2025-03-29T10:19:39.396Z",
     "author": 11,
+    "short_code": "J2N8ebpX",
     "tags": [
       1
     ]
@@ -19152,6 +19315,7 @@
     "cooking_time": 20,
     "date_created": "2025-03-29T10:23:54.884Z",
     "author": 11,
+    "short_code": "pXNDdre0",
     "tags": [
       2,
       3,
@@ -19169,6 +19333,7 @@
     "cooking_time": 10,
     "date_created": "2025-03-29T10:27:22.144Z",
     "author": 6,
+    "short_code": "HYQsDrvQ",
     "tags": [
       3
     ]
@@ -19184,6 +19349,7 @@
     "cooking_time": 5,
     "date_created": "2025-03-29T10:36:30.536Z",
     "author": 5,
+    "short_code": "YcBMKnuG",
     "tags": [
       3
     ]
@@ -19199,6 +19365,7 @@
     "cooking_time": 20,
     "date_created": "2025-03-29T10:39:39.424Z",
     "author": 6,
+    "short_code": "zpEY9UEF",
     "tags": [
       2,
       3

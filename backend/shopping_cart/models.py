@@ -24,9 +24,14 @@ class ShoppingCart(models.Model):
     class Meta:
         """Мета-информация ShoppingCart."""
 
-        verbose_name = 'Запись списка покупок'
-        verbose_name_plural = 'Записи списка покупок'
-        unique_together = ('recipe', 'user')
+        verbose_name = 'Список покупок'
+        verbose_name_plural = 'Список покупок'
+        constraints = (
+            models.UniqueConstraint(
+                fields=('recipe', 'user'),
+                name='unique_shoppingcart'
+            ),
+        )
 
     def __str__(self):
         """Строковое представление записи списка покупок."""

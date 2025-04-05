@@ -18,7 +18,7 @@ class Favorite(models.Model):
     recipe = models.ForeignKey(
         Recipe,
         on_delete=models.CASCADE,
-        related_name='farovite_users'
+        related_name='favorited_by'
     )
 
     class Meta:
@@ -26,7 +26,12 @@ class Favorite(models.Model):
 
         verbose_name = 'Избранное'
         verbose_name_plural = 'Избранное'
-        unique_together = ('recipe', 'user')
+        constraints = (
+            models.UniqueConstraint(
+                fields=('recipe', 'user'),
+                name='unique_favorite'
+            ),
+        )
 
     def __str__(self):
         """Строковое представление избранного."""
