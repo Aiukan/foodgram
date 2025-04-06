@@ -114,15 +114,16 @@ class Recipe(models.Model):
         """Генерация уникального короткого кода для рецепта."""
         length = SHORT_CODE_MAX_LENGTH
         characters = string.ascii_letters + string.digits
-        short_code = ''.join(random.choice(characters) for _ in range(length))
+        while True:
+            short_code = ''.join(
+                random.choice(characters) for _ in range(length)
+            )
+            if not Recipe.objects.filter(short_code=short_code).exists():
+                break
         return short_code
 
     def save(self, *args, **kwargs):
         """Добавление короткого кода только при создании рецепта."""
         if not self.short_code:
-            while True:
-                short_code = self.generate_short_code()
-                if not Recipe.objects.filter(short_code=short_code).exists():
-                    self.short_code = short_code
-                    break
+            self.short_code = self.generate_short_code()
         super().save(*args, **kwargs)

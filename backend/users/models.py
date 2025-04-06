@@ -8,8 +8,6 @@ from foodgram_backend.constants import (MAX_EMAIL_LENGTH,
                                         MAX_LAST_NAME_LENGTH,
                                         MAX_USERNAME_LENGTH)
 
-username_validator = UnicodeUsernameValidator()
-
 
 class User(AbstractUser):
     """Модель пользователя, поддерживающая изображения."""
@@ -23,7 +21,7 @@ class User(AbstractUser):
         unique=True,
         verbose_name="Имя пользователя",
         help_text="Уникальное имя пользователя, используемое для входа.",
-        validators=(username_validator,)
+        validators=(UnicodeUsernameValidator(),)
     )
     first_name = models.CharField(
         max_length=MAX_FIRST_NAME_LENGTH,

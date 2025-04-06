@@ -3,8 +3,7 @@ import django_filters
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db.models import Exists, F, OuterRef, Sum
-from django.http import (HttpResponse, HttpResponseNotFound,
-                         HttpResponseRedirect)
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from djoser.views import UserViewSet
@@ -39,53 +38,61 @@ class UserViewSet(UserViewSet):
     """Вьюсет для пользователей Foodgram."""
 
     @action(
-        detail=False, methods=['put', 'delete'],
-        permission_classes=[IsAuthenticated], url_path='me/avatar'
+        detail=False, methods=['put'],
+        url_path='me/avatar', permission_classes=[IsAuthenticated]
     )
-    def avatar(self, request):
-        """Обновление или удаление аватара пользователя."""
+    def update_avatar(self, request):
+        """Обновление аватара пользователя."""
         user = request.user
-        if request.method == 'PUT':
-            serializer = AvatarSerializer(
-                instance=user, data=request.data, partial=True
-            )
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        if request.method == 'DELETE':
-            if user.avatar:
-                user.avatar.delete()
-                return Response(status=status.HTTP_204_NO_CONTENT)
+        serializer = AvatarSerializer(
+            instance=user, data=request.data, partial=True
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    @update_avatar.mapping.delete
+    def delete_avatar(self, request):
+        """Удаление аватара пользователя."""
+        user = request.user
+        if not user.avatar:
             return Response(
                 {"detail": "Нет аватара для удаления."},
                 status=status.HTTP_400_BAD_REQUEST
             )
+        user.avatar.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(
-        detail=True, methods=['post', 'delete'],
+        detail=True, methods=['post'], url_path='subscribe',
         permission_classes=[IsAuthenticated]
     )
-    def subscribe(self, request, id=None):
-        """Подписка и отписка от пользователя."""
+    def update_subscribe(self, request, id=None):
+        """Подписка на пользователя."""
         user_to = get_object_or_404(User, id=id)
         user_from = request.user
-        if request.method == 'POST':
-            serializer = SubscriptionCreateSerializer(
-                data={}, context={'request': request, 'user_to': user_to}
+        serializer = SubscriptionCreateSerializer(
+            data={'user_from': user_from.id, 'user_to': user_to.id},
+            context={'request': request}
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    @update_subscribe.mapping.delete
+    def delete_subscribe(self, request, id):
+        """Отписка от пользователя."""
+        user_to = get_object_or_404(User, id=id)
+        user_from = request.user
+        deleted_count, _ = Subscription.objects.filter(
+            user_from=user_from, user_to=user_to
+        ).delete()
+        if not deleted_count:
+            return Response(
+                {'error': 'Вы не подписаны на этого пользователя.'},
+                status=status.HTTP_400_BAD_REQUEST
             )
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        elif request.method == 'DELETE':
-            deleted_count, _ = Subscription.objects.filter(
-                user_from=user_from, user_to=user_to
-            ).delete()
-            if deleted_count == 0:
-                return Response(
-                    {'error': 'Вы не подписаны на этого пользователя.'},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(
         detail=False, methods=['get'], permission_classes=[IsAuthenticated]
@@ -104,9 +111,7 @@ class UserViewSet(UserViewSet):
             many=True,
             context={'request': request}
         )
-        if page is not None:
-            return self.get_paginated_response(serializer.data)
-        return Response(serializer.data)
+        return self.get_paginated_response(serializer.data)
 
     @action(
         detail=False, methods=['get'], permission_classes=[IsAuthenticated]
@@ -166,58 +171,66 @@ class RecipeViewSet(viewsets.ModelViewSet):
         )
 
     @action(
-        detail=True, methods=['post', 'delete'],
+        detail=True, methods=['post'], url_path='favorite',
         permission_classes=[IsAuthenticated]
     )
-    def favorite(self, request, pk=None):
-        """Добавление и удаление рецепта из избранного."""
+    def update_favorite(self, request, pk=None):
+        """Добавление в избранное."""
         user = request.user
         recipe = get_object_or_404(Recipe, pk=pk)
-        if request.method == 'POST':
-            serializer = FavoriteCreateSerializer(
-                data={},
-                context={'request': request, 'recipe': recipe}
+        serializer = FavoriteCreateSerializer(
+            data={'user': user.id, 'recipe': recipe.id},
+            context={'request': request}
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    @update_favorite.mapping.delete
+    def delete_favorite(self, request, pk):
+        """Удаление из избранного."""
+        user = request.user
+        recipe = get_object_or_404(Recipe, pk=pk)
+        deleted_count, _ = Favorite.objects.filter(
+            user=user, recipe=recipe
+        ).delete()
+        if not deleted_count:
+            return Response(
+                {"error": "Рецепт не обнаружен в избранном."},
+                status=status.HTTP_400_BAD_REQUEST
             )
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        elif request.method == 'DELETE':
-            deleted_count, _ = Favorite.objects.filter(
-                user=user, recipe=recipe
-            ).delete()
-            if deleted_count == 0:
-                return Response(
-                    {"error": "Рецепт не обнаружен в избранном."},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(
-        detail=True, methods=['post', 'delete'],
+        detail=True, methods=['post'], url_path='shopping_cart',
         permission_classes=[IsAuthenticated]
     )
-    def shopping_cart(self, request, pk=None):
-        """Добавление и удаление рецепта из списка покупок."""
+    def update_shopping_cart(self, request, pk=None):
+        """Добавление рецепта в списка покупок."""
         user = request.user
         recipe = get_object_or_404(Recipe, pk=pk)
-        if request.method == 'POST':
-            serializer = ShoppingCartCreateSerializer(
-                data={},
-                context={'request': request, 'recipe': recipe}
+        serializer = ShoppingCartCreateSerializer(
+            data={'user': user.id, 'recipe': recipe.id},
+            context={'request': request}
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    @update_shopping_cart.mapping.delete
+    def delete_shopping_cart(self, request, pk):
+        """Удаление рецепта из списка покупок."""
+        user = request.user
+        recipe = get_object_or_404(Recipe, pk=pk)
+        deleted_count, _ = ShoppingCart.objects.filter(
+            user=user, recipe=recipe
+        ).delete()
+        if not deleted_count:
+            return Response(
+                {"error": "Рецепт не обнаружен в списке покупок."},
+                status=status.HTTP_400_BAD_REQUEST
             )
-            serializer.is_valid(raise_exception=True)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        elif request.method == 'DELETE':
-            deleted_count, _ = ShoppingCart.objects.filter(
-                user=user, recipe=recipe
-            ).delete()
-            if deleted_count == 0:
-                return Response(
-                    {"error": "Рецепт не обнаружен в списке покупок."},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     @action(
         detail=False, methods=['get'], permission_classes=[IsAuthenticated]
@@ -262,9 +275,6 @@ class RecipeViewSet(viewsets.ModelViewSet):
 @api_view(('GET',))
 def short_recipe_url(request, encoded):
     """Представление для перехода на страницу рецепта по короткой ссылке."""
-    try:
-        recipe = Recipe.objects.get(short_code=encoded)
-    except Recipe.DoesNotExist:
-        return HttpResponseNotFound('Введен некорректный код рецепта.')
+    recipe = get_object_or_404(Recipe, short_code=encoded)
     recipe_url = f'/recipes/{recipe.id}/'
     return HttpResponseRedirect(recipe_url)

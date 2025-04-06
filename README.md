@@ -1,7 +1,10 @@
 # Приложение foodgram
 
 Предоставляет API и веб-интерфейс для взаимодействия с сервисом foodgram.
-Хост: https://aiukan2.ddns.net/. Права администратора (логин, пароль, почта): admin, admin, admin@ya.ru. После получения доступа над аккаунтом, можно сменить пароль, существует запасной админ-пользователь. 
+
+Домен: https://aiukan2.ddns.net/.
+
+Права администратора (логин, пароль, почта): admin, admin, admin@ya.ru. После получения доступа над аккаунтом, можно сменить пароль, существует запасной админ-пользователь. 
 
 ## Описание сервиса foodgram
 
@@ -36,9 +39,7 @@
 
 ## Описание API сервиса
 
-### Как запустить проект локально
-
-В ОС Windows для вызова интерпретатора следует использовать команду `python` вместо указанной `python3`.
+### Как запустить проект локально в Docker
 
 * Перейти в репозиторий в командной строке:
 
@@ -64,14 +65,64 @@ cd foodgram
 ./data/save-fixture.bat
 ```
 
-* Доступ к админ-зоне осуществляется через аккаунт admin (пароль admin, почта admin@ya.ru). После начала работы, необходимо переопределить пароль аккаунта admin.
+* Сервер будет доступен по адресу http://localhost:9000
 
 ### Документация к проекту
 
 При запущенном сервере, перейти по адресу:
 
 ```
-http://localhost/api/docs/
+http://localhost:9000/api/docs/
+```
+
+Пример запроса к API:
+
+1. Регистрация пользователя
+
+- email required string email (<= 254 characters) Адрес электронной почты
+
+- username required string (<= 150 characters) (^[\w.@+-]+\z) Уникальный юзернейм
+
+- first_name required string (<= 150 characters) Имя
+
+- last_name required string (<= 150 characters) Фамилия
+
+- password required string Пароль
+
+```
+Запрос на http://localhost:9000/api/users/
+ContentType: "application/json"
+{
+  "email": "vpupkin@yandex.ru",
+  "username": "vasya.pupkin",
+  "first_name": "Вася",
+  "last_name": "Иванов",
+  "password": "Qwerty123"
+}
+```
+
+Возможные результаты:
+```
+201 Пользователь успешно создан
+{
+  "email": "vpupkin@yandex.ru",
+  "id": 0,
+  "username": "vasya.pupkin",
+  "first_name": "Вася",
+  "last_name": "Иванов"
+}
+```
+```
+400 Ошибки валидации в стандартном формате DRF
+{
+  "field_name": [
+    "Обязательное поле."
+  ]
+}
 ```
 
 В документации можно найти описание всех эндпонитов, доступных для работы.
+
+## Автор
+
+- https://github.com/Aiukan

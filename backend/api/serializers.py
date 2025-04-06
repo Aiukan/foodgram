@@ -3,7 +3,6 @@ import base64
 
 from django.contrib.auth import get_user_model
 from django.core.files.base import ContentFile
-from django.db.models import Exists, OuterRef
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 
@@ -95,21 +94,14 @@ class FavoriteCreateSerializer(ModelSerializer):
 
         model = Favorite
         fields = ('user', 'recipe')
-        read_only_fields = ('user', 'recipe')
 
     def validate(self, data):
         """Валидация добавления в избранное."""
-        user = self.context['request'].user
-        recipe = self.context['recipe']
+        user = data.get('user')
+        recipe = data.get('recipe')
         if Favorite.objects.filter(user=user, recipe=recipe).exists():
             raise serializers.ValidationError("Рецепт уже в избранном.")
         return data
-
-    def create(self, validated_data):
-        """Добавление в избранное."""
-        user = self.context['request'].user
-        recipe = self.context['recipe']
-        return Favorite.objects.create(user=user, recipe=recipe)
 
     def to_representation(self, instance):
         """После добавления в избранное возвращается карточка рецепта."""
@@ -127,21 +119,14 @@ class ShoppingCartCreateSerializer(ModelSerializer):
 
         model = ShoppingCart
         fields = ('user', 'recipe')
-        read_only_fields = ('user', 'recipe')
 
     def validate(self, data):
         """Валидация добавления в список покупок."""
-        user = self.context['request'].user
-        recipe = self.context['recipe']
+        user = data.get('user')
+        recipe = data.get('recipe')
         if ShoppingCart.objects.filter(user=user, recipe=recipe).exists():
             raise serializers.ValidationError("Рецепт уже в списке покупок.")
         return data
-
-    def create(self, validated_data):
-        """Добавление в список покупок."""
-        user = self.context['request'].user
-        recipe = self.context['recipe']
-        return ShoppingCart.objects.create(user=user, recipe=recipe)
 
     def to_representation(self, instance):
         """После добавления в список покупок возвращается карточка рецепта."""
@@ -191,10 +176,8 @@ class SubscriptionsSerializer(UserSerializer):
         """Получение рецептов пользователя (с ограничением)."""
         request = self.context.get('request')
         recipes = Recipe.objects.filter(author=obj)
-        recipes_limit = request.query_params.get('recipes_limit')
         try:
-            recipes_limit = min(int(recipes_limit), 0)
-            recipes = recipes[:recipes_limit]
+            recipes = recipes[:int(request.query_params.get('recipes_limit'))]
         except TypeError:
             pass
         return ShortCardRecipeSerializer(recipes, many=True).data
@@ -212,12 +195,11 @@ class SubscriptionCreateSerializer(ModelSerializer):
 
         model = Subscription
         fields = ('user_from', 'user_to')
-        read_only_fields = ('user_from', 'user_to')
 
     def validate(self, data):
         """Проверка на самоподписку и повторную подписку."""
-        user_from = self.context['request'].user
-        user_to = self.context['user_to']
+        user_from = data.get('user_from')
+        user_to = data.get('user_to')
         if user_from == user_to:
             raise serializers.ValidationError('Нельзя подписаться на себя.')
         if Subscription.objects.filter(
@@ -225,14 +207,6 @@ class SubscriptionCreateSerializer(ModelSerializer):
         ).exists():
             raise serializers.ValidationError('Подписка уже существует.')
         return data
-
-    def create(self, validated_data):
-        """Создание подписки."""
-        user_from = self.context['request'].user
-        user_to = self.context['user_to']
-        return Subscription.objects.create(
-            user_from=user_from, user_to=user_to
-        )
 
     def to_representation(self, instance):
         """Вернуть данные пользователя, на которого подписались."""
@@ -351,19 +325,7 @@ class RecipeCreateUpdateSerializer(ModelSerializer):
 
     def to_representation(self, instance):
         """Возвращает представление рецепта после создания/обновления."""
-        user = (
-            self.context['request'].user
-            if self.context['request'].user.is_authenticated
-            else None
-        )
-        instance = Recipe.objects.annotate(
-            is_favorited=Exists(
-                Favorite.objects.filter(user=user, recipe=OuterRef('id'))
-            ),
-            is_in_shopping_cart=Exists(
-                ShoppingCart.objects.filter(user=user, recipe=OuterRef('id'))
-            )
-        ).get(id=instance.id)
+        instance = self.context.get('view').get_queryset().get(pk=instance.pk)
         return RecipeRetrieveSerializer(instance, context=self.context).data
 
 
